@@ -1,0 +1,12 @@
+cs.HiliteType = 'user1';
+cs.ForegroundColor = 'black';
+cs.BackgroundColor = 'red';
+set_param(0, 'HiliteAncestorsData', cs);
+hilite_system('fftTest/Constant1','user1');
+hilite_system('fftTest/FFT','user1');
+hilite_system('fftTest/FIR Interpolation','user1');
+hilite_system('fftTest/Logical Operator','user1');
+hilite_system('fftTest/Magnitude Square','user1');
+hilite_system('fftTest/Sine Wave','user1');
+hilite_system('fftTest/Sine Wave1','user1');
+hilite_system('fftTest/Sum','user1');
