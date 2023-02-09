@@ -1,0 +1,152 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Thu Feb  9 17:11:03 2023
+| Host         : HOLYSHITITWORKS running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file fftTest_control_sets_placed.rpt
+| Design       : fftTest
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    74 |
+|    Minimum number of control sets                        |    74 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   201 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    74 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |    13 |
+| >= 6 to < 8        |     7 |
+| >= 8 to < 10       |     8 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    46 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |             175 |           79 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |            2916 |          590 |
+| Yes          | No                    | Yes                    |           10284 |         2369 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+----------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+|  Clock Signal  |                             Enable Signal                            | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+----------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/SDFCummutator_xX_vld_reg          | reset_IBUF       |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/SDFCummutator_xX_vld_reg          | reset_IBUF       |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/SDFCummutator_xX_vld_reg          | reset_IBUF       |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/E[0]                              | reset_IBUF       |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | u_FFT/u_CTRL2_6_1/SDFController_wrCount                              | reset_IBUF       |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | u_FFT/u_CTRL2_6_1/SDFController_rdAddr_reg                           | reset_IBUF       |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/SDFCummutator_xX_vld_reg          | reset_IBUF       |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/SDFCummutator_xX_vld_reg          | reset_IBUF       |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/SDFCummutator_xX_vld_reg          | reset_IBUF       |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/SDFCummutator_rdCnt               | reset_IBUF       |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/SDFCummutator_rdCnt               | reset_IBUF       |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | u_FFT/u_CTRL1_5_1/SDFController_wrCount                              | reset_IBUF       |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG | u_FFT/u_CTRL1_5_1/SDFController_rdAddr_reg                           | reset_IBUF       |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/E[0]                              | reset_IBUF       |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | u_FFT/u_CTRL2_4_1/SDFController_wrCount                              | reset_IBUF       |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/SDFCummutator_rdCnt               | reset_IBUF       |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | u_FFT/u_CTRL2_4_1/SDFController_rdAddr_reg                           | reset_IBUF       |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG | u_FFT/u_CTRL1_3_1/SDFController_rdAddr_reg                           | reset_IBUF       |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG | u_FFT/u_CTRL1_3_1/SDFController_wrCount                              | reset_IBUF       |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/SDFCummutator_rdCnt               | reset_IBUF       |                3 |              7 |         2.33 |
+|  clk_IBUF_BUFG | u_FFT/u_CTRL2_2_1/SDFController_wrCount                              | reset_IBUF       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_FFT/u_CTRL2_2_1/SDFController_rdAddr_reg                           | reset_IBUF       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_fftTest_tc/E[0]                                                    | reset_IBUF       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/E[0]                              | reset_IBUF       |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/SDFCummutator_rdCnt               | reset_IBUF       |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_FFT/u_CTRL1_1_1/SDFController_rdAddr_reg                           | reset_IBUF       |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG | u_FFT/u_CTRL1_1_1/SDFController_wrCount                              | reset_IBUF       |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/SDFCummutator_rdCnt               | reset_IBUF       |                4 |              9 |         2.25 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/SDFOutmux_btf2Pipe_re             | reset_IBUF       |                7 |             33 |         4.71 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/SDFCummutator_wrxEnb_reg_0        | reset_IBUF       |               11 |             34 |         3.09 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/SDFCummutator_wrAddr_reg          | reset_IBUF       |               15 |             42 |         2.80 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/u_dataXMEM_re_0_1/p_0_in          |                  |                6 |             48 |         8.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/SDFOutmux_btf2Pipe_re             | reset_IBUF       |               13 |             68 |         5.23 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/SDFCummutator_wrxEnb_reg          | reset_IBUF       |               22 |             69 |         3.14 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/SDFOutmux_btf2Pipe_re             | reset_IBUF       |               13 |             70 |         5.38 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/SDFCummutator_wrxEnb_reg          | reset_IBUF       |               12 |             71 |         5.92 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/SDFOutmux_btf2Pipe_re             | reset_IBUF       |               13 |             72 |         5.54 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/SDFCummutator_wrxEnb_reg          | reset_IBUF       |               14 |             73 |         5.21 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/SDFOutmux_btf2Pipe_re             | reset_IBUF       |               12 |             74 |         6.17 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/SDFCummutator_wrxEnb_reg          | reset_IBUF       |               21 |             75 |         3.57 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/SDFCummutator_wrAddr_reg          | reset_IBUF       |               16 |             76 |         4.75 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/SDFOutmux_btf2Pipe_re             | reset_IBUF       |               15 |             76 |         5.07 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/SDFCummutator_wrAddr_reg          | reset_IBUF       |               22 |             77 |         3.50 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/SDFCummutator_wrxEnb_reg          | reset_IBUF       |               23 |             77 |         3.35 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/SDFOutmux_btf2Pipe_re             | reset_IBUF       |               22 |             78 |         3.55 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/SDFCummutator_wrAddr_reg          | reset_IBUF       |               22 |             78 |         3.55 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/SDFCummutator_wrAddr_reg          | reset_IBUF       |               12 |             79 |         6.58 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/SDFCummutator_xX_vld_reg          | reset_IBUF       |               16 |             80 |         5.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/SDFCummutator_wrAddr_reg          | reset_IBUF       |               12 |             80 |         6.67 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/SDFOutmux_btf2Pipe_re             | reset_IBUF       |               15 |             80 |         5.33 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_10_1/u_SDFCOMMUTATOR_10/E[0]                            | reset_IBUF       |               19 |             82 |         4.32 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_9_1/u_SDFCOMMUTATOR_9/E[0]                              | reset_IBUF       |               20 |             82 |         4.10 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_9_1/u_SDFCOMMUTATOR_9/SDFOutmux_btf2Pipe_re             | reset_IBUF       |               17 |             82 |         4.82 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_9_1/u_SDFCOMMUTATOR_9/SDFCummutator_wrAddr_reg_reg_0[0] | reset_IBUF       |               21 |             82 |         3.90 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/SDFCummutator_xX_vld_reg          | reset_IBUF       |               16 |             82 |         5.12 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_10_1/u_SDFCOMMUTATOR_10/SDFOutmux_btf2Pipe_re           | reset_IBUF       |               19 |             84 |         4.42 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_9_1/u_SDFCOMMUTATOR_9/SDFCummutator_xX_vld_reg          | reset_IBUF       |               14 |             84 |         6.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_10_1/u_SDFCOMMUTATOR_10/u_dataXMEM_im_0_10/p_0_in__0    |                  |               21 |             84 |         4.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_10_1/u_SDFCOMMUTATOR_10/SDFCummutator_wrXData_re_reg_0  | reset_IBUF       |               18 |             84 |         4.67 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/u_dataXMEM_im_0_2/p_0_in          |                  |               12 |             96 |         8.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4/p_0_in          |                  |               12 |             96 |         8.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_3_1/u_SDFCOMMUTATOR_3/u_dataXMEM_im_0_3/p_0_in          |                  |               12 |             96 |         8.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_5_1/u_SDFCOMMUTATOR_5/u_dataXMEM_re_0_5/p_0_in          |                  |               13 |            104 |         8.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/u_dataXMEM_re_0_6/p_0_in          |                  |               13 |            104 |         8.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_6_1/u_SDFCOMMUTATOR_6/p_0_in__0                         |                  |               13 |            104 |         8.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_9_1/u_SDFCOMMUTATOR_9/u_dataXMEM_im_0_9/p_0_in          |                  |               14 |            112 |         8.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/p_0_in                            |                  |               14 |            112 |         8.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF1_7_1/u_SDFCOMMUTATOR_7/u_dataXMEM_im_0_7/p_0_in__0       |                  |               14 |            112 |         8.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/u_dataXMEM_im_0_8/p_0_in__0       |                  |               14 |            112 |         8.00 |
+|  clk_IBUF_BUFG | u_FFT/u_SDF2_8_1/u_SDFCOMMUTATOR_8/p_0_in                            |                  |               14 |            112 |         8.00 |
+|  clk_IBUF_BUFG |                                                                      | reset_IBUF       |               79 |            175 |         2.22 |
+|  clk_IBUF_BUFG | u_FIR_Interpolation/phase_1023                                       | reset_IBUF       |               93 |            368 |         3.96 |
+|  clk_IBUF_BUFG | ce_out_OBUF                                                          |                  |              590 |           3249 |         5.51 |
+|  clk_IBUF_BUFG | ce_out_OBUF                                                          | reset_IBUF       |             1743 |           7625 |         4.37 |
++----------------+----------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+
+

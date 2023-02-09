@@ -1,0 +1,873 @@
+
+*** Running vivado
+    with args -log fftTest.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fftTest.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source fftTest.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental A:/School/Capstone/OCT/OCT.srcs/utils_1/imports/synth_1/fftTest.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from A:/School/Capstone/OCT/OCT.srcs/utils_1/imports/synth_1/fftTest.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top fftTest -part xc7a100tcsg324-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20472
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1827.695 ; gain = 408.059
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'fftTest' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/fftTest.vhd:53]
+INFO: [Synth 8-3491] module 'fftTest_tc' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/fftTest_tc.vhd:28' bound to instance 'u_fftTest_tc' of component 'fftTest_tc' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/fftTest.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'fftTest_tc' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/fftTest_tc.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'fftTest_tc' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/fftTest_tc.vhd:39]
+INFO: [Synth 8-3491] module 'Sine_Wave' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Sine_Wave.vhd:25' bound to instance 'u_Sine_Wave' of component 'Sine_Wave' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/fftTest.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'Sine_Wave' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Sine_Wave.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'Sine_Wave' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Sine_Wave.vhd:34]
+INFO: [Synth 8-3491] module 'Sine_Wave1' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Sine_Wave1.vhd:25' bound to instance 'u_Sine_Wave1' of component 'Sine_Wave1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/fftTest.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'Sine_Wave1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Sine_Wave1.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'Sine_Wave1' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Sine_Wave1.vhd:34]
+INFO: [Synth 8-3491] module 'FIR_Interpolation' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FIR_Interpolation.vhd:26' bound to instance 'u_FIR_Interpolation' of component 'FIR_Interpolation' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/fftTest.vhd:175]
+INFO: [Synth 8-638] synthesizing module 'FIR_Interpolation' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FIR_Interpolation.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'FIR_Interpolation' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FIR_Interpolation.vhd:40]
+INFO: [Synth 8-3491] module 'FFT' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:25' bound to instance 'u_FFT' of component 'FFT' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/fftTest.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'FFT' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:38]
+INFO: [Synth 8-3491] module 'RADIX22FFT_CTRL1_1' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_1.vhd:22' bound to instance 'u_CTRL1_1_1' of component 'RADIX22FFT_CTRL1_1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:589]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_CTRL1_1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_1.vhd:35]
+INFO: [Synth 8-226] default block is never used [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_1.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_CTRL1_1' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_1.vhd:35]
+INFO: [Synth 8-3491] module 'RADIX22FFT_SDF1_1' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_1.vhd:22' bound to instance 'u_SDF1_1_1' of component 'RADIX22FFT_SDF1_1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:600]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_SDF1_1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_1.vhd:40]
+	Parameter AddrWidth bound to: 9 - type: integer 
+	Parameter DataWidth bound to: 33 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataMEM_re_0_1_generic' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_1.vhd:144]
+INFO: [Synth 8-638] synthesizing module 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 9 - type: integer 
+	Parameter DataWidth bound to: 33 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleDualPortRAM_generic' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+INFO: [Synth 8-3491] module 'SDFCommutator1' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator1.vhd:22' bound to instance 'u_SDFCOMMUTATOR_1' of component 'SDFCommutator1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_1.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'SDFCommutator1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator1.vhd:48]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 33 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_re_0_1' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator1.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'SimpleDualPortRAM_generic__parameterized1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 33 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleDualPortRAM_generic__parameterized1' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 33 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_im_0_1' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator1.vhd:155]
+INFO: [Synth 8-256] done synthesizing module 'SDFCommutator1' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator1.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_SDF1_1' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_1.vhd:40]
+INFO: [Synth 8-3491] module 'RADIX22FFT_CTRL1_2' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_2.vhd:22' bound to instance 'u_CTRL2_2_1' of component 'RADIX22FFT_CTRL1_2' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:616]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_CTRL1_2' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_2.vhd:36]
+INFO: [Synth 8-226] default block is never used [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_2.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_CTRL1_2' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_2.vhd:36]
+INFO: [Synth 8-3491] module 'RADIX22FFT_SDF2_2' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_2.vhd:22' bound to instance 'u_SDF2_2_1' of component 'RADIX22FFT_SDF2_2' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:628]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_SDF2_2' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_2.vhd:41]
+	Parameter AddrWidth bound to: 8 - type: integer 
+	Parameter DataWidth bound to: 34 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataMEM_im_0_2' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_2.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'SimpleDualPortRAM_generic__parameterized3' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 8 - type: integer 
+	Parameter DataWidth bound to: 34 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleDualPortRAM_generic__parameterized3' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 8 - type: integer 
+	Parameter DataWidth bound to: 34 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataMEM_re_0_2' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_2.vhd:175]
+INFO: [Synth 8-3491] module 'SDFCommutator2' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator2.vhd:22' bound to instance 'u_SDFCOMMUTATOR_2' of component 'SDFCommutator2' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_2.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'SDFCommutator2' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator2.vhd:49]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 34 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_re_0_2' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator2.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'SimpleDualPortRAM_generic__parameterized5' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 34 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleDualPortRAM_generic__parameterized5' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 34 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_im_0_2' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator2.vhd:156]
+INFO: [Synth 8-256] done synthesizing module 'SDFCommutator2' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator2.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_SDF2_2' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_2.vhd:41]
+INFO: [Synth 8-3491] module 'TWDLROM_3_1' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_3_1.vhd:23' bound to instance 'u_twdlROM_3_1' of component 'TWDLROM_3_1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:645]
+INFO: [Synth 8-638] synthesizing module 'TWDLROM_3_1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_3_1.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'TWDLROM_3_1' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_3_1.vhd:34]
+INFO: [Synth 8-3491] module 'RADIX22FFT_CTRL1_3' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_3.vhd:22' bound to instance 'u_CTRL1_3_1' of component 'RADIX22FFT_CTRL1_3' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:654]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_CTRL1_3' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_3.vhd:35]
+INFO: [Synth 8-226] default block is never used [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_3.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_CTRL1_3' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_3.vhd:35]
+INFO: [Synth 8-3491] module 'RADIX22FFT_SDF1_3' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_3.vhd:22' bound to instance 'u_SDF1_3_1' of component 'RADIX22FFT_SDF1_3' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:665]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_SDF1_3' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_3.vhd:42]
+INFO: [Synth 8-3491] module 'Complex4Multiply' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Complex4Multiply.vhd:22' bound to instance 'u_MUL4' of component 'Complex4Multiply' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_3.vhd:169]
+INFO: [Synth 8-638] synthesizing module 'Complex4Multiply' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Complex4Multiply.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'Complex4Multiply' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Complex4Multiply.vhd:38]
+	Parameter AddrWidth bound to: 7 - type: integer 
+	Parameter DataWidth bound to: 35 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataMEM_im_0_3' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_3.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'SimpleDualPortRAM_generic__parameterized7' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 7 - type: integer 
+	Parameter DataWidth bound to: 35 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleDualPortRAM_generic__parameterized7' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 7 - type: integer 
+	Parameter DataWidth bound to: 35 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataMEM_re_0_3' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_3.vhd:196]
+INFO: [Synth 8-3491] module 'SDFCommutator3' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator3.vhd:22' bound to instance 'u_SDFCOMMUTATOR_3' of component 'SDFCommutator3' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_3.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'SDFCommutator3' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator3.vhd:49]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 35 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_re_0_3' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator3.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'SimpleDualPortRAM_generic__parameterized9' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 35 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleDualPortRAM_generic__parameterized9' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 35 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_im_0_3' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator3.vhd:156]
+INFO: [Synth 8-256] done synthesizing module 'SDFCommutator3' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator3.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_SDF1_3' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_3.vhd:42]
+INFO: [Synth 8-3491] module 'RADIX22FFT_CTRL1_4' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_4.vhd:22' bound to instance 'u_CTRL2_4_1' of component 'RADIX22FFT_CTRL1_4' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:683]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_CTRL1_4' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_4.vhd:36]
+INFO: [Synth 8-226] default block is never used [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_4.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_CTRL1_4' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_4.vhd:36]
+INFO: [Synth 8-3491] module 'RADIX22FFT_SDF2_4' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_4.vhd:22' bound to instance 'u_SDF2_4_1' of component 'RADIX22FFT_SDF2_4' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:695]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_SDF2_4' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_4.vhd:41]
+	Parameter AddrWidth bound to: 6 - type: integer 
+	Parameter DataWidth bound to: 36 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataMEM_im_0_4' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_4.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'SimpleDualPortRAM_generic__parameterized11' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 6 - type: integer 
+	Parameter DataWidth bound to: 36 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleDualPortRAM_generic__parameterized11' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 6 - type: integer 
+	Parameter DataWidth bound to: 36 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataMEM_re_0_4' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_4.vhd:175]
+INFO: [Synth 8-3491] module 'SDFCommutator4' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator4.vhd:22' bound to instance 'u_SDFCOMMUTATOR_4' of component 'SDFCommutator4' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_4.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'SDFCommutator4' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator4.vhd:49]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 36 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_re_0_4' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator4.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'SimpleDualPortRAM_generic__parameterized13' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 36 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleDualPortRAM_generic__parameterized13' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 36 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_im_0_4' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator4.vhd:156]
+INFO: [Synth 8-256] done synthesizing module 'SDFCommutator4' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator4.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_SDF2_4' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_4.vhd:41]
+INFO: [Synth 8-3491] module 'TWDLROM_5_1' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_5_1.vhd:23' bound to instance 'u_twdlROM_5_1' of component 'TWDLROM_5_1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:712]
+INFO: [Synth 8-638] synthesizing module 'TWDLROM_5_1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_5_1.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'TWDLROM_5_1' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_5_1.vhd:34]
+INFO: [Synth 8-3491] module 'RADIX22FFT_CTRL1_5' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_5.vhd:22' bound to instance 'u_CTRL1_5_1' of component 'RADIX22FFT_CTRL1_5' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:721]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_CTRL1_5' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_5.vhd:35]
+INFO: [Synth 8-226] default block is never used [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_5.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_CTRL1_5' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_5.vhd:35]
+INFO: [Synth 8-3491] module 'RADIX22FFT_SDF1_5' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_5.vhd:22' bound to instance 'u_SDF1_5_1' of component 'RADIX22FFT_SDF1_5' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:732]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_SDF1_5' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_5.vhd:42]
+INFO: [Synth 8-3491] module 'Complex4Multiply_block' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Complex4Multiply_block.vhd:22' bound to instance 'u_MUL4' of component 'Complex4Multiply_block' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_5.vhd:169]
+INFO: [Synth 8-638] synthesizing module 'Complex4Multiply_block' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Complex4Multiply_block.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'Complex4Multiply_block' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Complex4Multiply_block.vhd:38]
+	Parameter AddrWidth bound to: 5 - type: integer 
+	Parameter DataWidth bound to: 37 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataMEM_im_0_5' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_5.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'SimpleDualPortRAM_generic__parameterized15' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 5 - type: integer 
+	Parameter DataWidth bound to: 37 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleDualPortRAM_generic__parameterized15' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 5 - type: integer 
+	Parameter DataWidth bound to: 37 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataMEM_re_0_5' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_5.vhd:196]
+INFO: [Synth 8-3491] module 'SDFCommutator5' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator5.vhd:22' bound to instance 'u_SDFCOMMUTATOR_5' of component 'SDFCommutator5' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_5.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'SDFCommutator5' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator5.vhd:49]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 37 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_re_0_5' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator5.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'SimpleDualPortRAM_generic__parameterized17' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 37 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleDualPortRAM_generic__parameterized17' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 37 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_im_0_5' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator5.vhd:156]
+INFO: [Synth 8-256] done synthesizing module 'SDFCommutator5' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator5.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_SDF1_5' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_5.vhd:42]
+INFO: [Synth 8-3491] module 'RADIX22FFT_CTRL1_6' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_6.vhd:22' bound to instance 'u_CTRL2_6_1' of component 'RADIX22FFT_CTRL1_6' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:750]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_CTRL1_6' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_6.vhd:36]
+INFO: [Synth 8-226] default block is never used [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_6.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_CTRL1_6' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_6.vhd:36]
+INFO: [Synth 8-3491] module 'RADIX22FFT_SDF2_6' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_6.vhd:22' bound to instance 'u_SDF2_6_1' of component 'RADIX22FFT_SDF2_6' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:762]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_SDF2_6' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_6.vhd:41]
+	Parameter AddrWidth bound to: 4 - type: integer 
+	Parameter DataWidth bound to: 38 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataMEM_im_0_6' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_6.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'SimpleDualPortRAM_generic__parameterized19' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 4 - type: integer 
+	Parameter DataWidth bound to: 38 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleDualPortRAM_generic__parameterized19' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 4 - type: integer 
+	Parameter DataWidth bound to: 38 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataMEM_re_0_6' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_6.vhd:175]
+INFO: [Synth 8-3491] module 'SDFCommutator6' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator6.vhd:22' bound to instance 'u_SDFCOMMUTATOR_6' of component 'SDFCommutator6' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_6.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'SDFCommutator6' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator6.vhd:49]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 38 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_re_0_6' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator6.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'SimpleDualPortRAM_generic__parameterized21' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 38 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleDualPortRAM_generic__parameterized21' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 38 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_im_0_6' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator6.vhd:156]
+INFO: [Synth 8-256] done synthesizing module 'SDFCommutator6' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator6.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_SDF2_6' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_6.vhd:41]
+INFO: [Synth 8-3491] module 'TWDLROM_7_1' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_7_1.vhd:23' bound to instance 'u_twdlROM_7_1' of component 'TWDLROM_7_1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:779]
+INFO: [Synth 8-638] synthesizing module 'TWDLROM_7_1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_7_1.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'TWDLROM_7_1' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_7_1.vhd:34]
+INFO: [Synth 8-3491] module 'RADIX22FFT_CTRL1_7' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_7.vhd:22' bound to instance 'u_CTRL1_7_1' of component 'RADIX22FFT_CTRL1_7' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:788]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_CTRL1_7' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_7.vhd:35]
+INFO: [Synth 8-226] default block is never used [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_7.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_CTRL1_7' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_7.vhd:35]
+INFO: [Synth 8-3491] module 'RADIX22FFT_SDF1_7' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_7.vhd:22' bound to instance 'u_SDF1_7_1' of component 'RADIX22FFT_SDF1_7' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:799]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_SDF1_7' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_7.vhd:42]
+INFO: [Synth 8-3491] module 'Complex4Multiply_block1' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Complex4Multiply_block1.vhd:22' bound to instance 'u_MUL4' of component 'Complex4Multiply_block1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_7.vhd:169]
+INFO: [Synth 8-638] synthesizing module 'Complex4Multiply_block1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Complex4Multiply_block1.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'Complex4Multiply_block1' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Complex4Multiply_block1.vhd:38]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 39 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataMEM_im_0_7' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_7.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'SimpleDualPortRAM_generic__parameterized23' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 39 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleDualPortRAM_generic__parameterized23' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 39 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataMEM_re_0_7' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_7.vhd:196]
+INFO: [Synth 8-3491] module 'SDFCommutator7' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator7.vhd:22' bound to instance 'u_SDFCOMMUTATOR_7' of component 'SDFCommutator7' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_7.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'SDFCommutator7' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator7.vhd:49]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 39 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_re_0_7' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator7.vhd:135]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 39 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_im_0_7' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator7.vhd:148]
+INFO: [Synth 8-256] done synthesizing module 'SDFCommutator7' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator7.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_SDF1_7' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_7.vhd:42]
+INFO: [Synth 8-3491] module 'RADIX22FFT_CTRL1_8' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_8.vhd:22' bound to instance 'u_CTRL2_8_1' of component 'RADIX22FFT_CTRL1_8' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:817]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_CTRL1_8' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_8.vhd:36]
+INFO: [Synth 8-226] default block is never used [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_8.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_CTRL1_8' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_8.vhd:36]
+INFO: [Synth 8-3491] module 'RADIX22FFT_SDF2_8' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_8.vhd:22' bound to instance 'u_SDF2_8_1' of component 'RADIX22FFT_SDF2_8' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:829]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_SDF2_8' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_8.vhd:41]
+	Parameter AddrWidth bound to: 2 - type: integer 
+	Parameter DataWidth bound to: 40 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataMEM_im_0_8' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_8.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'SimpleDualPortRAM_generic__parameterized26' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 2 - type: integer 
+	Parameter DataWidth bound to: 40 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleDualPortRAM_generic__parameterized26' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 2 - type: integer 
+	Parameter DataWidth bound to: 40 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataMEM_re_0_8' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_8.vhd:175]
+INFO: [Synth 8-3491] module 'SDFCommutator8' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator8.vhd:22' bound to instance 'u_SDFCOMMUTATOR_8' of component 'SDFCommutator8' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_8.vhd:188]
+INFO: [Synth 8-638] synthesizing module 'SDFCommutator8' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator8.vhd:49]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 40 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_re_0_8' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator8.vhd:135]
+INFO: [Synth 8-638] synthesizing module 'SimpleDualPortRAM_generic__parameterized28' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 40 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleDualPortRAM_generic__parameterized28' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 40 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_im_0_8' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator8.vhd:148]
+INFO: [Synth 8-256] done synthesizing module 'SDFCommutator8' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator8.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_SDF2_8' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_8.vhd:41]
+INFO: [Synth 8-3491] module 'TWDLROM_9_1' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_9_1.vhd:23' bound to instance 'u_twdlROM_9_1' of component 'TWDLROM_9_1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:846]
+INFO: [Synth 8-638] synthesizing module 'TWDLROM_9_1' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_9_1.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'TWDLROM_9_1' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_9_1.vhd:34]
+INFO: [Synth 8-3491] module 'RADIX22FFT_CTRL1_9' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_9.vhd:22' bound to instance 'u_CTRL1_9_1' of component 'RADIX22FFT_CTRL1_9' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:855]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_CTRL1_9' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_9.vhd:35]
+INFO: [Synth 8-226] default block is never used [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_9.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_CTRL1_9' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_9.vhd:35]
+INFO: [Synth 8-3491] module 'RADIX22FFT_SDF1_9' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_9.vhd:22' bound to instance 'u_SDF1_9_1' of component 'RADIX22FFT_SDF1_9' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:866]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_SDF1_9' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_9.vhd:42]
+INFO: [Synth 8-3491] module 'Complex4Multiply_block2' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Complex4Multiply_block2.vhd:22' bound to instance 'u_MUL4' of component 'Complex4Multiply_block2' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_9.vhd:164]
+INFO: [Synth 8-638] synthesizing module 'Complex4Multiply_block2' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Complex4Multiply_block2.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'Complex4Multiply_block2' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Complex4Multiply_block2.vhd:38]
+INFO: [Synth 8-3491] module 'SDFCommutator9' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator9.vhd:22' bound to instance 'u_SDFCOMMUTATOR_9' of component 'SDFCommutator9' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_9.vhd:178]
+INFO: [Synth 8-638] synthesizing module 'SDFCommutator9' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator9.vhd:49]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 41 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_re_0_9' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator9.vhd:134]
+INFO: [Synth 8-638] synthesizing module 'SimpleDualPortRAM_generic__parameterized30' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 41 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleDualPortRAM_generic__parameterized30' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 41 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_im_0_9' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator9.vhd:147]
+INFO: [Synth 8-256] done synthesizing module 'SDFCommutator9' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator9.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_SDF1_9' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_9.vhd:42]
+INFO: [Synth 8-3491] module 'RADIX22FFT_CTRL1_10' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_10.vhd:22' bound to instance 'u_CTRL2_10_1' of component 'RADIX22FFT_CTRL1_10' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:884]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_CTRL1_10' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_10.vhd:36]
+INFO: [Synth 8-226] default block is never used [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_10.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_CTRL1_10' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_10.vhd:36]
+INFO: [Synth 8-3491] module 'RADIX22FFT_SDF2_10' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_10.vhd:22' bound to instance 'u_SDF2_10_1' of component 'RADIX22FFT_SDF2_10' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:896]
+INFO: [Synth 8-638] synthesizing module 'RADIX22FFT_SDF2_10' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_10.vhd:41]
+INFO: [Synth 8-3491] module 'SDFCommutator10' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator10.vhd:22' bound to instance 'u_SDFCOMMUTATOR_10' of component 'SDFCommutator10' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_10.vhd:163]
+INFO: [Synth 8-638] synthesizing module 'SDFCommutator10' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator10.vhd:49]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 42 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_re_0_10' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator10.vhd:140]
+INFO: [Synth 8-638] synthesizing module 'SimpleDualPortRAM_generic__parameterized32' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 42 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SimpleDualPortRAM_generic__parameterized32' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:37]
+	Parameter AddrWidth bound to: 3 - type: integer 
+	Parameter DataWidth bound to: 42 - type: integer 
+INFO: [Synth 8-3491] module 'SimpleDualPortRAM_generic' declared at 'C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd:22' bound to instance 'u_dataXMEM_im_0_10' of component 'SimpleDualPortRAM_generic' [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator10.vhd:153]
+INFO: [Synth 8-256] done synthesizing module 'SDFCommutator10' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator10.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'RADIX22FFT_SDF2_10' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_10.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'FFT' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'fftTest' (0#1) [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/fftTest.vhd:53]
+WARNING: [Synth 8-6014] Unused sequential element SDFController_multjState_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_1.vhd:64]
+WARNING: [Synth 8-6014] Unused sequential element SDFController_multiply_J_reg_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_1.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element SDFCummutator_wrData_im_reg_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator1.vhd:191]
+WARNING: [Synth 8-6014] Unused sequential element Radix22TwdlMapping_dvldReg1_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_3_1.vhd:143]
+WARNING: [Synth 8-6014] Unused sequential element Radix22TwdlMapping_dvldReg2_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_3_1.vhd:144]
+WARNING: [Synth 8-6014] Unused sequential element SDFController_multjState_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_3.vhd:64]
+WARNING: [Synth 8-6014] Unused sequential element SDFController_multiply_J_reg_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_3.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element Radix22TwdlMapping_dvldReg1_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_5_1.vhd:143]
+WARNING: [Synth 8-6014] Unused sequential element Radix22TwdlMapping_dvldReg2_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_5_1.vhd:144]
+WARNING: [Synth 8-6014] Unused sequential element SDFController_multjState_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_5.vhd:64]
+WARNING: [Synth 8-6014] Unused sequential element SDFController_multiply_J_reg_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_5.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element Radix22TwdlMapping_dvldReg1_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_7_1.vhd:143]
+WARNING: [Synth 8-6014] Unused sequential element Radix22TwdlMapping_dvldReg2_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_7_1.vhd:144]
+WARNING: [Synth 8-6014] Unused sequential element SDFController_multjState_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_7.vhd:64]
+WARNING: [Synth 8-6014] Unused sequential element SDFController_multiply_J_reg_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_7.vhd:66]
+WARNING: [Synth 8-6014] Unused sequential element Radix22TwdlMapping_dvldReg1_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_9_1.vhd:143]
+WARNING: [Synth 8-6014] Unused sequential element Radix22TwdlMapping_dvldReg2_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_9_1.vhd:144]
+WARNING: [Synth 8-6014] Unused sequential element SDFController_multjState_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_9.vhd:63]
+WARNING: [Synth 8-6014] Unused sequential element SDFController_multiply_J_reg_reg was removed.  [C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_9.vhd:65]
+WARNING: [Synth 8-7129] Port dout_9_1_vld in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[41] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[40] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[39] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[38] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[37] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[36] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[35] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[34] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[33] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[32] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[31] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[30] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[29] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[28] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[27] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[26] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[25] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[24] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[23] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[22] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[21] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[20] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[19] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[18] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[17] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[16] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[15] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[14] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[13] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[12] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[11] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[10] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[9] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[8] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[7] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[6] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[5] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[4] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[3] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[2] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[1] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[0] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[41] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[40] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[39] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[38] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[37] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[36] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[35] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[34] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[33] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[32] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[31] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[30] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[29] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[28] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[27] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[26] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[25] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[24] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[23] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[22] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[21] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[20] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[19] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[18] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[17] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[16] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[15] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[14] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[13] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[12] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[11] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[10] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[9] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[8] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[7] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[6] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[5] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[4] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[3] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[2] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[1] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_im[0] in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_vld in module SDFCommutator10 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[40] in module SDFCommutator9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[39] in module SDFCommutator9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[38] in module SDFCommutator9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[37] in module SDFCommutator9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[36] in module SDFCommutator9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[35] in module SDFCommutator9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[34] in module SDFCommutator9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[33] in module SDFCommutator9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[32] in module SDFCommutator9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[31] in module SDFCommutator9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[30] in module SDFCommutator9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[29] in module SDFCommutator9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[28] in module SDFCommutator9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xf_re[27] in module SDFCommutator9 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3192.195 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [A:/School/Capstone/OCT/OCT.srcs/constrs_1/new/pinconstraints.xdc]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'testClk' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [A:/School/Capstone/OCT/OCT.srcs/constrs_1/new/pinconstraints.xdc:98]
+Finished Parsing XDC File [A:/School/Capstone/OCT/OCT.srcs/constrs_1/new/pinconstraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [A:/School/Capstone/OCT/OCT.srcs/constrs_1/new/pinconstraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fftTest_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fftTest_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 3192.195 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.150 . Memory (MB): peak = 3192.195 ; gain = 0.000
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:57 ; elapsed = 00:00:56 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:57 ; elapsed = 00:00:56 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:01:03 ; elapsed = 00:01:02 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+fftTest__GC0FFT__GB2FFT__GB1FFT__GB0FIR_Interpolation__GB2FIR_Interpolation__GB1FIR_Interpolation__GB0---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:01:04 ; elapsed = 00:01:03 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:07 ; elapsed = 00:01:06 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Mimic Skeleton from Reference
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Mimic Skeleton from Reference : Time (s): cpu = 00:01:10 ; elapsed = 00:01:09 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: yes
+
+   Stitch points used : changed
+
+
+2. Change Summary
+
+Report Incremental Modules: 
++-+----------------+------------+----------+----------+
+| |Changed Modules |Replication |Instances |Changed % |
++-+----------------+------------+----------+----------+
++-+----------------+------------+----------+----------+
+
+
+   Full Design Size (number of cells) : 105665
+   Resynthesis Design Size (number of cells) : 0
+   Resynth % : 0.0000,  Reuse % : 100.0000
+
+3. Reference Checkpoint Information
+
++--------------------------------------------------------------------------------------+
+| DCP Location:  | A:/School/Capstone/OCT/OCT.srcs/utils_1/imports/synth_1/fftTest.dcp |
++--------------------------------------------------------------------------------------+
+
+
++--------------------------------+------------------------------+
+|         DCP Information        |             Value            |
++--------------------------------+------------------------------+
+| Vivado Version                 |                    v2022.2 |
+| DCP State                      |                              |
++--------------------------------+------------------------------+
+
+
+
+Report RTL Partitions: 
++------+-------------------------------+------------+----------+
+|      |RTL Partition                  |Replication |Instances |
++------+-------------------------------+------------+----------+
+|1     |FIR_Interpolation__GB0_#REUSE# |           1|         0|
+|2     |FIR_Interpolation__GB1_#REUSE# |           1|         0|
+|3     |FIR_Interpolation__GB2_#REUSE# |           1|         0|
+|4     |FFT__GB0_#REUSE#               |           1|         0|
+|5     |FFT__GB1_#REUSE#               |           1|         0|
+|6     |FFT__GB2_#REUSE#               |           1|         0|
+|7     |fftTest__GC0_#REUSE#           |           1|         0|
++------+-------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:14 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged AreaOpt Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged AreaOpt Partitions : Time (s): cpu = 00:01:12 ; elapsed = 00:01:15 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:18 ; elapsed = 00:01:21 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:18 ; elapsed = 00:01:21 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:18 ; elapsed = 00:01:21 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged Partitions : Time (s): cpu = 00:01:19 ; elapsed = 00:01:21 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance u_FFT/u_SDF1_1_1/u_dataMEM_re_0_1_generic/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_FFT/u_SDF2_2_1/u_dataMEM_im_0_2/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_FFT/u_SDF2_2_1/u_dataMEM_re_0_2/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_FFT/u_SDF1_3_1/u_dataMEM_im_0_3/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_FFT/u_SDF1_3_1/u_dataMEM_re_0_3/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_FFT/u_SDF2_4_1/u_dataMEM_im_0_4/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_FFT/u_SDF2_4_1/u_dataMEM_re_0_4/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_FFT/u_SDF1_5_1/u_dataMEM_im_0_5/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_FFT/u_SDF1_5_1/u_dataMEM_re_0_5/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:23 ; elapsed = 00:01:26 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:23 ; elapsed = 00:01:26 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:25 ; elapsed = 00:01:27 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:25 ; elapsed = 00:01:27 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                     | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|fftTest     | u_FFT/u_SDF1_1_1/dinXTwdl_re_reg[31]         | 4      | 32    | YES          | NO                 | YES               | 32     | 0       | 
+|fftTest     | u_FFT/u_SDF1_1_1/dinXTwdl_1_1_vld_1_reg      | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|fftTest     | u_FFT/u_SDF1_3_1/u_MUL4/din_im_reg_reg[34]   | 4      | 34    | YES          | NO                 | YES               | 34     | 0       | 
+|fftTest     | u_FFT/u_SDF1_3_1/u_MUL4/din_re_reg_reg[34]   | 4      | 34    | YES          | NO                 | YES               | 34     | 0       | 
+|fftTest     | u_FFT/u_SDF1_3_1/u_MUL4/dinXTwdl_3_1_vld_reg | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|fftTest     | u_FFT/u_SDF1_7_1/u_MUL4/din_im_reg_reg[38]   | 4      | 38    | YES          | NO                 | YES               | 38     | 0       | 
+|fftTest     | u_FFT/u_SDF1_7_1/u_MUL4/din_re_reg_reg[38]   | 4      | 38    | YES          | NO                 | YES               | 38     | 0       | 
+|fftTest     | u_FFT/u_SDF1_7_1/u_MUL4/dinXTwdl_7_1_vld_reg | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|fftTest     | u_FFT/u_SDF1_5_1/u_MUL4/din_im_reg_reg[36]   | 4      | 36    | YES          | NO                 | YES               | 36     | 0       | 
+|fftTest     | u_FFT/u_SDF1_5_1/u_MUL4/din_re_reg_reg[36]   | 4      | 36    | YES          | NO                 | YES               | 36     | 0       | 
+|fftTest     | u_FFT/u_SDF1_5_1/u_MUL4/dinXTwdl_5_1_vld_reg | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|fftTest     | u_FFT/u_SDF1_9_1/u_MUL4/din_im_reg_reg[40]   | 4      | 40    | YES          | NO                 | YES               | 40     | 0       | 
+|fftTest     | u_FFT/u_SDF1_9_1/u_MUL4/din_re_reg_reg[40]   | 4      | 40    | YES          | NO                 | YES               | 40     | 0       | 
+|fftTest     | u_FFT/u_SDF1_9_1/u_MUL4/dinXTwdl_9_1_vld_reg | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++------------+----------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name       | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fftTest           | A*B               | 30     | 18     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fftTest           | A*B               | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fftTest           | PCIN>>17+A*B      | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fftTest           | A*B               | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fftTest           | PCIN>>17+A*B      | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fftTest           | A*B               | 30     | 18     | -      | -      | 33     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fftTest           | A*B               | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fftTest           | PCIN>>17+A*B      | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fftTest           | A*B               | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fftTest           | PCIN>>17+A*B      | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_3 | A'*B'             | 30     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_3 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_3 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_3 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_3 | A'*B'             | 30     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_3 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_3 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_3 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_3 | A'*B'             | 30     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_3 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_3 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_3 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_3 | A'*B'             | 30     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_3 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_3 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_3 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_5 | A'*B'             | 30     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_5 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_5 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_5 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_5 | A'*B'             | 30     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_5 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_5 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_5 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_5 | A'*B'             | 30     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_5 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_5 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_5 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_5 | A'*B'             | 30     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_5 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_5 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_5 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_7 | A'*B'             | 30     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_7 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_7 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_7 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_7 | A'*B'             | 30     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_7 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_7 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_7 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_7 | A'*B'             | 30     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_7 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_7 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_7 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_7 | A'*B'             | 30     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_7 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_7 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_7 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_9 | A'*B'             | 30     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_9 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_9 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_9 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_9 | A'*B'             | 30     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_9 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_9 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_9 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_9 | A'*B'             | 30     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_9 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_9 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_9 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_9 | A'*B'             | 30     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_9 | (PCIN>>17+A'*B')' | 30     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|RADIX22FFT_SDF1_9 | A'*B'             | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|RADIX22FFT_SDF1_9 | (PCIN>>17+A'*B')' | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|FIR_Interpolation | A*B               | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 4      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 7      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 11     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 11     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 10     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 7      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 4      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FIR_Interpolation | PCIN+A*B          | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   866|
+|3     |DSP48E1  |    98|
+|4     |LUT1     |   223|
+|5     |LUT2     |  2795|
+|6     |LUT3     |  1594|
+|7     |LUT4     |  1907|
+|8     |LUT5     |   611|
+|9     |LUT6     |  3683|
+|10    |MUXF7    |  1011|
+|11    |MUXF8    |   272|
+|12    |RAM16X1S |    84|
+|13    |RAM32M   |   151|
+|14    |RAMB18E1 |     7|
+|15    |RAMB36E1 |     2|
+|16    |SRL16E   |   333|
+|17    |FDCE     | 10452|
+|18    |FDPE     |     7|
+|19    |FDRE     |  2916|
+|20    |IBUF     |     3|
+|21    |OBUF     |    44|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:25 ; elapsed = 00:01:28 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:01:14 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+Synthesis Optimization Complete : Time (s): cpu = 00:01:25 ; elapsed = 00:01:28 . Memory (MB): peak = 3192.195 ; gain = 1772.559
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.332 . Memory (MB): peak = 3192.195 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2491 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 3192.195 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 235 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 84 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 151 instances
+
+Synth Design complete, checksum: 4c48faf1
+INFO: [Common 17-83] Releasing license: Synthesis
+240 Infos, 123 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:31 ; elapsed = 00:01:35 . Memory (MB): peak = 3192.195 ; gain = 2167.891
+INFO: [Common 17-1381] The checkpoint 'A:/School/Capstone/OCT/OCT.runs/synth_1/fftTest.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fftTest_utilization_synth.rpt -pb fftTest_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Feb  9 17:10:10 2023...

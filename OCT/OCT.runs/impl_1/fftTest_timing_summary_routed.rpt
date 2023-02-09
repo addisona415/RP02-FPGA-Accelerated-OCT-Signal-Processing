@@ -1,0 +1,1364 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Thu Feb  9 17:11:51 2023
+| Host         : HOLYSHITITWORKS running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file fftTest_timing_summary_routed.rpt -pb fftTest_timing_summary_routed.pb -rpx fftTest_timing_summary_routed.rpx -warn_on_violation
+| Design       : fftTest
+| Device       : 7a100t-csg324
+| Speed File   : -3  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                  Violations  
+---------  ----------------  ---------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell  1000        
+DPIR-1     Warning           Asynchronous driver check    1136        
+SYNTH-10   Warning           Wide multiplier              70          
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (15082)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (48042)
+5. checking no_input_delay (2)
+6. checking no_output_delay (43)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (15082)
+----------------------------
+ There are 15082 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (48042)
+----------------------------------------------------
+ There are 48042 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (2)
+------------------------------
+ There are 2 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (43)
+--------------------------------
+ There are 43 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                48086          inf        0.000                      0                48086           NA           NA                      NA                    NA  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock    Waveform(ns)       Period(ns)      Frequency(MHz)
+-----    ------------       ----------      --------------
+testClk  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay         48086 Endpoints
+Min Delay         48086 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FFT/intdelay_reg_reg[1][2]_srl2_u_FFT_intdelay_reg_5_reg_c_0/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        42.853ns  (logic 31.474ns (73.447%)  route 11.379ns (26.553%))
+  Logic Levels:           29  (DSP48E1=23 FDCE=1 LUT3=2 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y11         FDCE                         0.000     0.000 r  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+    SLICE_X33Y11         FDCE (Prop_fdce_C_Q)         0.341     0.341 f  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/Q
+                         net (fo=121, routed)         2.804     3.145    u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0_n_0
+    SLICE_X29Y15         LUT3 (Prop_lut3_I1_O)        0.101     3.246 r  u_FIR_Interpolation/add_temp_i_29/O
+                         net (fo=6, routed)           0.992     4.239    u_FIR_Interpolation/add_temp_i_29_n_0
+    SLICE_X26Y12         LUT6 (Prop_lut6_I3_O)        0.239     4.478 r  u_FIR_Interpolation/add_temp_i_21/O
+                         net (fo=1, routed)           0.000     4.478    u_FIR_Interpolation/add_temp_i_21_n_0
+    SLICE_X26Y12         MUXF7 (Prop_muxf7_I1_O)      0.167     4.645 r  u_FIR_Interpolation/add_temp_i_10/O
+                         net (fo=1, routed)           0.304     4.949    u_FIR_Interpolation/add_temp_i_10_n_0
+    SLICE_X26Y12         LUT5 (Prop_lut5_I0_O)        0.229     5.178 r  u_FIR_Interpolation/add_temp_i_3/O
+                         net (fo=1, routed)           2.546     7.724    u_FIR_Interpolation/product_mux_22[1]
+    DSP48_X1Y32          DSP48E1 (Prop_dsp48e1_B[1]_PCOUT[47])
+                                                      2.838    10.562 r  u_FIR_Interpolation/add_temp/PCOUT[47]
+                         net (fo=1, routed)           0.002    10.564    u_FIR_Interpolation/add_temp_n_106
+    DSP48_X1Y33          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    11.819 r  u_FIR_Interpolation/add_temp_1/PCOUT[47]
+                         net (fo=1, routed)           0.002    11.821    u_FIR_Interpolation/add_temp_1_n_106
+    DSP48_X1Y34          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    13.076 r  u_FIR_Interpolation/add_temp_2/PCOUT[47]
+                         net (fo=1, routed)           0.002    13.078    u_FIR_Interpolation/add_temp_2_n_106
+    DSP48_X1Y35          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    14.333 r  u_FIR_Interpolation/add_temp_3/PCOUT[47]
+                         net (fo=1, routed)           0.002    14.335    u_FIR_Interpolation/add_temp_3_n_106
+    DSP48_X1Y36          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    15.590 r  u_FIR_Interpolation/add_temp_4/PCOUT[47]
+                         net (fo=1, routed)           0.002    15.592    u_FIR_Interpolation/add_temp_4_n_106
+    DSP48_X1Y37          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    16.847 r  u_FIR_Interpolation/add_temp_5/PCOUT[47]
+                         net (fo=1, routed)           0.002    16.849    u_FIR_Interpolation/add_temp_5_n_106
+    DSP48_X1Y38          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    18.104 r  u_FIR_Interpolation/add_temp_6/PCOUT[47]
+                         net (fo=1, routed)           0.002    18.106    u_FIR_Interpolation/add_temp_6_n_106
+    DSP48_X1Y39          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    19.361 r  u_FIR_Interpolation/add_temp_7/PCOUT[47]
+                         net (fo=1, routed)           0.002    19.363    u_FIR_Interpolation/add_temp_7_n_106
+    DSP48_X1Y40          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    20.618 r  u_FIR_Interpolation/add_temp_8/PCOUT[47]
+                         net (fo=1, routed)           0.002    20.620    u_FIR_Interpolation/add_temp_8_n_106
+    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    21.875 r  u_FIR_Interpolation/add_temp_9/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.877    u_FIR_Interpolation/add_temp_9_n_106
+    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    23.132 r  u_FIR_Interpolation/add_temp_10/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.134    u_FIR_Interpolation/add_temp_10_n_106
+    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    24.389 r  u_FIR_Interpolation/add_temp_11/PCOUT[47]
+                         net (fo=1, routed)           0.002    24.391    u_FIR_Interpolation/add_temp_11_n_106
+    DSP48_X1Y44          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    25.646 r  u_FIR_Interpolation/add_temp_12/PCOUT[47]
+                         net (fo=1, routed)           0.002    25.648    u_FIR_Interpolation/add_temp_12_n_106
+    DSP48_X1Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    26.903 r  u_FIR_Interpolation/add_temp_13/PCOUT[47]
+                         net (fo=1, routed)           0.002    26.905    u_FIR_Interpolation/add_temp_13_n_106
+    DSP48_X1Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    28.160 r  u_FIR_Interpolation/add_temp_14/PCOUT[47]
+                         net (fo=1, routed)           0.002    28.162    u_FIR_Interpolation/add_temp_14_n_106
+    DSP48_X1Y47          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    29.417 r  u_FIR_Interpolation/add_temp_15/PCOUT[47]
+                         net (fo=1, routed)           0.002    29.419    u_FIR_Interpolation/add_temp_15_n_106
+    DSP48_X1Y48          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    30.674 r  u_FIR_Interpolation/add_temp_16/PCOUT[47]
+                         net (fo=1, routed)           0.002    30.676    u_FIR_Interpolation/add_temp_16_n_106
+    DSP48_X1Y49          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    31.931 r  u_FIR_Interpolation/add_temp_17/PCOUT[47]
+                         net (fo=1, routed)           0.056    31.986    u_FIR_Interpolation/add_temp_17_n_106
+    DSP48_X1Y50          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    33.241 r  u_FIR_Interpolation/add_temp_18/PCOUT[47]
+                         net (fo=1, routed)           0.002    33.243    u_FIR_Interpolation/add_temp_18_n_106
+    DSP48_X1Y51          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    34.498 r  u_FIR_Interpolation/add_temp_19/PCOUT[47]
+                         net (fo=1, routed)           0.002    34.500    u_FIR_Interpolation/add_temp_19_n_106
+    DSP48_X1Y52          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    35.755 r  u_FIR_Interpolation/add_temp_20/PCOUT[47]
+                         net (fo=1, routed)           0.002    35.757    u_FIR_Interpolation/add_temp_20_n_106
+    DSP48_X1Y53          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    37.012 r  u_FIR_Interpolation/add_temp_21/PCOUT[47]
+                         net (fo=1, routed)           0.002    37.014    u_FIR_Interpolation/add_temp_21_n_106
+    DSP48_X1Y54          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[2])
+                                                      1.107    38.121 r  u_FIR_Interpolation/add_temp_22/P[2]
+                         net (fo=1, routed)           4.149    42.271    u_FIR_Interpolation/add_temp_22_n_103
+    SLICE_X37Y34         LUT3 (Prop_lut3_I0_O)        0.097    42.368 r  u_FIR_Interpolation/regout[2]_i_1/O
+                         net (fo=2, routed)           0.485    42.853    u_FFT/FIR_Interpolation_out[2]
+    SLICE_X30Y30         SRL16E                                       r  u_FFT/intdelay_reg_reg[1][2]_srl2_u_FFT_intdelay_reg_5_reg_c_0/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FIR_Interpolation/regout_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        42.739ns  (logic 31.474ns (73.642%)  route 11.265ns (26.358%))
+  Logic Levels:           29  (DSP48E1=23 FDCE=1 LUT3=2 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y11         FDCE                         0.000     0.000 r  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+    SLICE_X33Y11         FDCE (Prop_fdce_C_Q)         0.341     0.341 f  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/Q
+                         net (fo=121, routed)         2.804     3.145    u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0_n_0
+    SLICE_X29Y15         LUT3 (Prop_lut3_I1_O)        0.101     3.246 r  u_FIR_Interpolation/add_temp_i_29/O
+                         net (fo=6, routed)           0.992     4.239    u_FIR_Interpolation/add_temp_i_29_n_0
+    SLICE_X26Y12         LUT6 (Prop_lut6_I3_O)        0.239     4.478 r  u_FIR_Interpolation/add_temp_i_21/O
+                         net (fo=1, routed)           0.000     4.478    u_FIR_Interpolation/add_temp_i_21_n_0
+    SLICE_X26Y12         MUXF7 (Prop_muxf7_I1_O)      0.167     4.645 r  u_FIR_Interpolation/add_temp_i_10/O
+                         net (fo=1, routed)           0.304     4.949    u_FIR_Interpolation/add_temp_i_10_n_0
+    SLICE_X26Y12         LUT5 (Prop_lut5_I0_O)        0.229     5.178 r  u_FIR_Interpolation/add_temp_i_3/O
+                         net (fo=1, routed)           2.546     7.724    u_FIR_Interpolation/product_mux_22[1]
+    DSP48_X1Y32          DSP48E1 (Prop_dsp48e1_B[1]_PCOUT[47])
+                                                      2.838    10.562 r  u_FIR_Interpolation/add_temp/PCOUT[47]
+                         net (fo=1, routed)           0.002    10.564    u_FIR_Interpolation/add_temp_n_106
+    DSP48_X1Y33          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    11.819 r  u_FIR_Interpolation/add_temp_1/PCOUT[47]
+                         net (fo=1, routed)           0.002    11.821    u_FIR_Interpolation/add_temp_1_n_106
+    DSP48_X1Y34          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    13.076 r  u_FIR_Interpolation/add_temp_2/PCOUT[47]
+                         net (fo=1, routed)           0.002    13.078    u_FIR_Interpolation/add_temp_2_n_106
+    DSP48_X1Y35          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    14.333 r  u_FIR_Interpolation/add_temp_3/PCOUT[47]
+                         net (fo=1, routed)           0.002    14.335    u_FIR_Interpolation/add_temp_3_n_106
+    DSP48_X1Y36          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    15.590 r  u_FIR_Interpolation/add_temp_4/PCOUT[47]
+                         net (fo=1, routed)           0.002    15.592    u_FIR_Interpolation/add_temp_4_n_106
+    DSP48_X1Y37          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    16.847 r  u_FIR_Interpolation/add_temp_5/PCOUT[47]
+                         net (fo=1, routed)           0.002    16.849    u_FIR_Interpolation/add_temp_5_n_106
+    DSP48_X1Y38          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    18.104 r  u_FIR_Interpolation/add_temp_6/PCOUT[47]
+                         net (fo=1, routed)           0.002    18.106    u_FIR_Interpolation/add_temp_6_n_106
+    DSP48_X1Y39          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    19.361 r  u_FIR_Interpolation/add_temp_7/PCOUT[47]
+                         net (fo=1, routed)           0.002    19.363    u_FIR_Interpolation/add_temp_7_n_106
+    DSP48_X1Y40          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    20.618 r  u_FIR_Interpolation/add_temp_8/PCOUT[47]
+                         net (fo=1, routed)           0.002    20.620    u_FIR_Interpolation/add_temp_8_n_106
+    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    21.875 r  u_FIR_Interpolation/add_temp_9/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.877    u_FIR_Interpolation/add_temp_9_n_106
+    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    23.132 r  u_FIR_Interpolation/add_temp_10/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.134    u_FIR_Interpolation/add_temp_10_n_106
+    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    24.389 r  u_FIR_Interpolation/add_temp_11/PCOUT[47]
+                         net (fo=1, routed)           0.002    24.391    u_FIR_Interpolation/add_temp_11_n_106
+    DSP48_X1Y44          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    25.646 r  u_FIR_Interpolation/add_temp_12/PCOUT[47]
+                         net (fo=1, routed)           0.002    25.648    u_FIR_Interpolation/add_temp_12_n_106
+    DSP48_X1Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    26.903 r  u_FIR_Interpolation/add_temp_13/PCOUT[47]
+                         net (fo=1, routed)           0.002    26.905    u_FIR_Interpolation/add_temp_13_n_106
+    DSP48_X1Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    28.160 r  u_FIR_Interpolation/add_temp_14/PCOUT[47]
+                         net (fo=1, routed)           0.002    28.162    u_FIR_Interpolation/add_temp_14_n_106
+    DSP48_X1Y47          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    29.417 r  u_FIR_Interpolation/add_temp_15/PCOUT[47]
+                         net (fo=1, routed)           0.002    29.419    u_FIR_Interpolation/add_temp_15_n_106
+    DSP48_X1Y48          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    30.674 r  u_FIR_Interpolation/add_temp_16/PCOUT[47]
+                         net (fo=1, routed)           0.002    30.676    u_FIR_Interpolation/add_temp_16_n_106
+    DSP48_X1Y49          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    31.931 r  u_FIR_Interpolation/add_temp_17/PCOUT[47]
+                         net (fo=1, routed)           0.056    31.986    u_FIR_Interpolation/add_temp_17_n_106
+    DSP48_X1Y50          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    33.241 r  u_FIR_Interpolation/add_temp_18/PCOUT[47]
+                         net (fo=1, routed)           0.002    33.243    u_FIR_Interpolation/add_temp_18_n_106
+    DSP48_X1Y51          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    34.498 r  u_FIR_Interpolation/add_temp_19/PCOUT[47]
+                         net (fo=1, routed)           0.002    34.500    u_FIR_Interpolation/add_temp_19_n_106
+    DSP48_X1Y52          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    35.755 r  u_FIR_Interpolation/add_temp_20/PCOUT[47]
+                         net (fo=1, routed)           0.002    35.757    u_FIR_Interpolation/add_temp_20_n_106
+    DSP48_X1Y53          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    37.012 r  u_FIR_Interpolation/add_temp_21/PCOUT[47]
+                         net (fo=1, routed)           0.002    37.014    u_FIR_Interpolation/add_temp_21_n_106
+    DSP48_X1Y54          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[2])
+                                                      1.107    38.121 r  u_FIR_Interpolation/add_temp_22/P[2]
+                         net (fo=1, routed)           4.149    42.271    u_FIR_Interpolation/add_temp_22_n_103
+    SLICE_X37Y34         LUT3 (Prop_lut3_I0_O)        0.097    42.368 r  u_FIR_Interpolation/regout[2]_i_1/O
+                         net (fo=2, routed)           0.371    42.739    u_FIR_Interpolation/FIR_Interpolation_out[2]
+    SLICE_X37Y34         FDCE                                         r  u_FIR_Interpolation/regout_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FFT/intdelay_reg_reg[1][8]_srl2_u_FFT_intdelay_reg_5_reg_c_0/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        42.692ns  (logic 31.474ns (73.724%)  route 11.218ns (26.276%))
+  Logic Levels:           29  (DSP48E1=23 FDCE=1 LUT3=2 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y11         FDCE                         0.000     0.000 r  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+    SLICE_X33Y11         FDCE (Prop_fdce_C_Q)         0.341     0.341 f  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/Q
+                         net (fo=121, routed)         2.804     3.145    u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0_n_0
+    SLICE_X29Y15         LUT3 (Prop_lut3_I1_O)        0.101     3.246 r  u_FIR_Interpolation/add_temp_i_29/O
+                         net (fo=6, routed)           0.992     4.239    u_FIR_Interpolation/add_temp_i_29_n_0
+    SLICE_X26Y12         LUT6 (Prop_lut6_I3_O)        0.239     4.478 r  u_FIR_Interpolation/add_temp_i_21/O
+                         net (fo=1, routed)           0.000     4.478    u_FIR_Interpolation/add_temp_i_21_n_0
+    SLICE_X26Y12         MUXF7 (Prop_muxf7_I1_O)      0.167     4.645 r  u_FIR_Interpolation/add_temp_i_10/O
+                         net (fo=1, routed)           0.304     4.949    u_FIR_Interpolation/add_temp_i_10_n_0
+    SLICE_X26Y12         LUT5 (Prop_lut5_I0_O)        0.229     5.178 r  u_FIR_Interpolation/add_temp_i_3/O
+                         net (fo=1, routed)           2.546     7.724    u_FIR_Interpolation/product_mux_22[1]
+    DSP48_X1Y32          DSP48E1 (Prop_dsp48e1_B[1]_PCOUT[47])
+                                                      2.838    10.562 r  u_FIR_Interpolation/add_temp/PCOUT[47]
+                         net (fo=1, routed)           0.002    10.564    u_FIR_Interpolation/add_temp_n_106
+    DSP48_X1Y33          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    11.819 r  u_FIR_Interpolation/add_temp_1/PCOUT[47]
+                         net (fo=1, routed)           0.002    11.821    u_FIR_Interpolation/add_temp_1_n_106
+    DSP48_X1Y34          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    13.076 r  u_FIR_Interpolation/add_temp_2/PCOUT[47]
+                         net (fo=1, routed)           0.002    13.078    u_FIR_Interpolation/add_temp_2_n_106
+    DSP48_X1Y35          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    14.333 r  u_FIR_Interpolation/add_temp_3/PCOUT[47]
+                         net (fo=1, routed)           0.002    14.335    u_FIR_Interpolation/add_temp_3_n_106
+    DSP48_X1Y36          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    15.590 r  u_FIR_Interpolation/add_temp_4/PCOUT[47]
+                         net (fo=1, routed)           0.002    15.592    u_FIR_Interpolation/add_temp_4_n_106
+    DSP48_X1Y37          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    16.847 r  u_FIR_Interpolation/add_temp_5/PCOUT[47]
+                         net (fo=1, routed)           0.002    16.849    u_FIR_Interpolation/add_temp_5_n_106
+    DSP48_X1Y38          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    18.104 r  u_FIR_Interpolation/add_temp_6/PCOUT[47]
+                         net (fo=1, routed)           0.002    18.106    u_FIR_Interpolation/add_temp_6_n_106
+    DSP48_X1Y39          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    19.361 r  u_FIR_Interpolation/add_temp_7/PCOUT[47]
+                         net (fo=1, routed)           0.002    19.363    u_FIR_Interpolation/add_temp_7_n_106
+    DSP48_X1Y40          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    20.618 r  u_FIR_Interpolation/add_temp_8/PCOUT[47]
+                         net (fo=1, routed)           0.002    20.620    u_FIR_Interpolation/add_temp_8_n_106
+    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    21.875 r  u_FIR_Interpolation/add_temp_9/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.877    u_FIR_Interpolation/add_temp_9_n_106
+    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    23.132 r  u_FIR_Interpolation/add_temp_10/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.134    u_FIR_Interpolation/add_temp_10_n_106
+    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    24.389 r  u_FIR_Interpolation/add_temp_11/PCOUT[47]
+                         net (fo=1, routed)           0.002    24.391    u_FIR_Interpolation/add_temp_11_n_106
+    DSP48_X1Y44          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    25.646 r  u_FIR_Interpolation/add_temp_12/PCOUT[47]
+                         net (fo=1, routed)           0.002    25.648    u_FIR_Interpolation/add_temp_12_n_106
+    DSP48_X1Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    26.903 r  u_FIR_Interpolation/add_temp_13/PCOUT[47]
+                         net (fo=1, routed)           0.002    26.905    u_FIR_Interpolation/add_temp_13_n_106
+    DSP48_X1Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    28.160 r  u_FIR_Interpolation/add_temp_14/PCOUT[47]
+                         net (fo=1, routed)           0.002    28.162    u_FIR_Interpolation/add_temp_14_n_106
+    DSP48_X1Y47          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    29.417 r  u_FIR_Interpolation/add_temp_15/PCOUT[47]
+                         net (fo=1, routed)           0.002    29.419    u_FIR_Interpolation/add_temp_15_n_106
+    DSP48_X1Y48          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    30.674 r  u_FIR_Interpolation/add_temp_16/PCOUT[47]
+                         net (fo=1, routed)           0.002    30.676    u_FIR_Interpolation/add_temp_16_n_106
+    DSP48_X1Y49          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    31.931 r  u_FIR_Interpolation/add_temp_17/PCOUT[47]
+                         net (fo=1, routed)           0.056    31.986    u_FIR_Interpolation/add_temp_17_n_106
+    DSP48_X1Y50          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    33.241 r  u_FIR_Interpolation/add_temp_18/PCOUT[47]
+                         net (fo=1, routed)           0.002    33.243    u_FIR_Interpolation/add_temp_18_n_106
+    DSP48_X1Y51          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    34.498 r  u_FIR_Interpolation/add_temp_19/PCOUT[47]
+                         net (fo=1, routed)           0.002    34.500    u_FIR_Interpolation/add_temp_19_n_106
+    DSP48_X1Y52          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    35.755 r  u_FIR_Interpolation/add_temp_20/PCOUT[47]
+                         net (fo=1, routed)           0.002    35.757    u_FIR_Interpolation/add_temp_20_n_106
+    DSP48_X1Y53          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    37.012 r  u_FIR_Interpolation/add_temp_21/PCOUT[47]
+                         net (fo=1, routed)           0.002    37.014    u_FIR_Interpolation/add_temp_21_n_106
+    DSP48_X1Y54          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[8])
+                                                      1.107    38.121 r  u_FIR_Interpolation/add_temp_22/P[8]
+                         net (fo=1, routed)           4.033    42.155    u_FIR_Interpolation/add_temp_22_n_97
+    SLICE_X36Y37         LUT3 (Prop_lut3_I0_O)        0.097    42.252 r  u_FIR_Interpolation/regout[8]_i_1/O
+                         net (fo=2, routed)           0.440    42.692    u_FFT/FIR_Interpolation_out[8]
+    SLICE_X30Y36         SRL16E                                       r  u_FFT/intdelay_reg_reg[1][8]_srl2_u_FFT_intdelay_reg_5_reg_c_0/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FIR_Interpolation/regout_reg[8]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        42.621ns  (logic 31.474ns (73.846%)  route 11.147ns (26.154%))
+  Logic Levels:           29  (DSP48E1=23 FDCE=1 LUT3=2 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y11         FDCE                         0.000     0.000 r  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+    SLICE_X33Y11         FDCE (Prop_fdce_C_Q)         0.341     0.341 f  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/Q
+                         net (fo=121, routed)         2.804     3.145    u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0_n_0
+    SLICE_X29Y15         LUT3 (Prop_lut3_I1_O)        0.101     3.246 r  u_FIR_Interpolation/add_temp_i_29/O
+                         net (fo=6, routed)           0.992     4.239    u_FIR_Interpolation/add_temp_i_29_n_0
+    SLICE_X26Y12         LUT6 (Prop_lut6_I3_O)        0.239     4.478 r  u_FIR_Interpolation/add_temp_i_21/O
+                         net (fo=1, routed)           0.000     4.478    u_FIR_Interpolation/add_temp_i_21_n_0
+    SLICE_X26Y12         MUXF7 (Prop_muxf7_I1_O)      0.167     4.645 r  u_FIR_Interpolation/add_temp_i_10/O
+                         net (fo=1, routed)           0.304     4.949    u_FIR_Interpolation/add_temp_i_10_n_0
+    SLICE_X26Y12         LUT5 (Prop_lut5_I0_O)        0.229     5.178 r  u_FIR_Interpolation/add_temp_i_3/O
+                         net (fo=1, routed)           2.546     7.724    u_FIR_Interpolation/product_mux_22[1]
+    DSP48_X1Y32          DSP48E1 (Prop_dsp48e1_B[1]_PCOUT[47])
+                                                      2.838    10.562 r  u_FIR_Interpolation/add_temp/PCOUT[47]
+                         net (fo=1, routed)           0.002    10.564    u_FIR_Interpolation/add_temp_n_106
+    DSP48_X1Y33          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    11.819 r  u_FIR_Interpolation/add_temp_1/PCOUT[47]
+                         net (fo=1, routed)           0.002    11.821    u_FIR_Interpolation/add_temp_1_n_106
+    DSP48_X1Y34          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    13.076 r  u_FIR_Interpolation/add_temp_2/PCOUT[47]
+                         net (fo=1, routed)           0.002    13.078    u_FIR_Interpolation/add_temp_2_n_106
+    DSP48_X1Y35          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    14.333 r  u_FIR_Interpolation/add_temp_3/PCOUT[47]
+                         net (fo=1, routed)           0.002    14.335    u_FIR_Interpolation/add_temp_3_n_106
+    DSP48_X1Y36          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    15.590 r  u_FIR_Interpolation/add_temp_4/PCOUT[47]
+                         net (fo=1, routed)           0.002    15.592    u_FIR_Interpolation/add_temp_4_n_106
+    DSP48_X1Y37          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    16.847 r  u_FIR_Interpolation/add_temp_5/PCOUT[47]
+                         net (fo=1, routed)           0.002    16.849    u_FIR_Interpolation/add_temp_5_n_106
+    DSP48_X1Y38          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    18.104 r  u_FIR_Interpolation/add_temp_6/PCOUT[47]
+                         net (fo=1, routed)           0.002    18.106    u_FIR_Interpolation/add_temp_6_n_106
+    DSP48_X1Y39          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    19.361 r  u_FIR_Interpolation/add_temp_7/PCOUT[47]
+                         net (fo=1, routed)           0.002    19.363    u_FIR_Interpolation/add_temp_7_n_106
+    DSP48_X1Y40          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    20.618 r  u_FIR_Interpolation/add_temp_8/PCOUT[47]
+                         net (fo=1, routed)           0.002    20.620    u_FIR_Interpolation/add_temp_8_n_106
+    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    21.875 r  u_FIR_Interpolation/add_temp_9/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.877    u_FIR_Interpolation/add_temp_9_n_106
+    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    23.132 r  u_FIR_Interpolation/add_temp_10/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.134    u_FIR_Interpolation/add_temp_10_n_106
+    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    24.389 r  u_FIR_Interpolation/add_temp_11/PCOUT[47]
+                         net (fo=1, routed)           0.002    24.391    u_FIR_Interpolation/add_temp_11_n_106
+    DSP48_X1Y44          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    25.646 r  u_FIR_Interpolation/add_temp_12/PCOUT[47]
+                         net (fo=1, routed)           0.002    25.648    u_FIR_Interpolation/add_temp_12_n_106
+    DSP48_X1Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    26.903 r  u_FIR_Interpolation/add_temp_13/PCOUT[47]
+                         net (fo=1, routed)           0.002    26.905    u_FIR_Interpolation/add_temp_13_n_106
+    DSP48_X1Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    28.160 r  u_FIR_Interpolation/add_temp_14/PCOUT[47]
+                         net (fo=1, routed)           0.002    28.162    u_FIR_Interpolation/add_temp_14_n_106
+    DSP48_X1Y47          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    29.417 r  u_FIR_Interpolation/add_temp_15/PCOUT[47]
+                         net (fo=1, routed)           0.002    29.419    u_FIR_Interpolation/add_temp_15_n_106
+    DSP48_X1Y48          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    30.674 r  u_FIR_Interpolation/add_temp_16/PCOUT[47]
+                         net (fo=1, routed)           0.002    30.676    u_FIR_Interpolation/add_temp_16_n_106
+    DSP48_X1Y49          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    31.931 r  u_FIR_Interpolation/add_temp_17/PCOUT[47]
+                         net (fo=1, routed)           0.056    31.986    u_FIR_Interpolation/add_temp_17_n_106
+    DSP48_X1Y50          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    33.241 r  u_FIR_Interpolation/add_temp_18/PCOUT[47]
+                         net (fo=1, routed)           0.002    33.243    u_FIR_Interpolation/add_temp_18_n_106
+    DSP48_X1Y51          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    34.498 r  u_FIR_Interpolation/add_temp_19/PCOUT[47]
+                         net (fo=1, routed)           0.002    34.500    u_FIR_Interpolation/add_temp_19_n_106
+    DSP48_X1Y52          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    35.755 r  u_FIR_Interpolation/add_temp_20/PCOUT[47]
+                         net (fo=1, routed)           0.002    35.757    u_FIR_Interpolation/add_temp_20_n_106
+    DSP48_X1Y53          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    37.012 r  u_FIR_Interpolation/add_temp_21/PCOUT[47]
+                         net (fo=1, routed)           0.002    37.014    u_FIR_Interpolation/add_temp_21_n_106
+    DSP48_X1Y54          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[8])
+                                                      1.107    38.121 r  u_FIR_Interpolation/add_temp_22/P[8]
+                         net (fo=1, routed)           4.033    42.155    u_FIR_Interpolation/add_temp_22_n_97
+    SLICE_X36Y37         LUT3 (Prop_lut3_I0_O)        0.097    42.252 r  u_FIR_Interpolation/regout[8]_i_1/O
+                         net (fo=2, routed)           0.370    42.621    u_FIR_Interpolation/FIR_Interpolation_out[8]
+    SLICE_X36Y37         FDCE                                         r  u_FIR_Interpolation/regout_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FFT/intdelay_reg_reg[1][4]_srl2_u_FFT_intdelay_reg_5_reg_c_0/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        42.596ns  (logic 31.474ns (73.889%)  route 11.122ns (26.111%))
+  Logic Levels:           29  (DSP48E1=23 FDCE=1 LUT3=2 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y11         FDCE                         0.000     0.000 r  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+    SLICE_X33Y11         FDCE (Prop_fdce_C_Q)         0.341     0.341 f  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/Q
+                         net (fo=121, routed)         2.804     3.145    u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0_n_0
+    SLICE_X29Y15         LUT3 (Prop_lut3_I1_O)        0.101     3.246 r  u_FIR_Interpolation/add_temp_i_29/O
+                         net (fo=6, routed)           0.992     4.239    u_FIR_Interpolation/add_temp_i_29_n_0
+    SLICE_X26Y12         LUT6 (Prop_lut6_I3_O)        0.239     4.478 r  u_FIR_Interpolation/add_temp_i_21/O
+                         net (fo=1, routed)           0.000     4.478    u_FIR_Interpolation/add_temp_i_21_n_0
+    SLICE_X26Y12         MUXF7 (Prop_muxf7_I1_O)      0.167     4.645 r  u_FIR_Interpolation/add_temp_i_10/O
+                         net (fo=1, routed)           0.304     4.949    u_FIR_Interpolation/add_temp_i_10_n_0
+    SLICE_X26Y12         LUT5 (Prop_lut5_I0_O)        0.229     5.178 r  u_FIR_Interpolation/add_temp_i_3/O
+                         net (fo=1, routed)           2.546     7.724    u_FIR_Interpolation/product_mux_22[1]
+    DSP48_X1Y32          DSP48E1 (Prop_dsp48e1_B[1]_PCOUT[47])
+                                                      2.838    10.562 r  u_FIR_Interpolation/add_temp/PCOUT[47]
+                         net (fo=1, routed)           0.002    10.564    u_FIR_Interpolation/add_temp_n_106
+    DSP48_X1Y33          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    11.819 r  u_FIR_Interpolation/add_temp_1/PCOUT[47]
+                         net (fo=1, routed)           0.002    11.821    u_FIR_Interpolation/add_temp_1_n_106
+    DSP48_X1Y34          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    13.076 r  u_FIR_Interpolation/add_temp_2/PCOUT[47]
+                         net (fo=1, routed)           0.002    13.078    u_FIR_Interpolation/add_temp_2_n_106
+    DSP48_X1Y35          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    14.333 r  u_FIR_Interpolation/add_temp_3/PCOUT[47]
+                         net (fo=1, routed)           0.002    14.335    u_FIR_Interpolation/add_temp_3_n_106
+    DSP48_X1Y36          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    15.590 r  u_FIR_Interpolation/add_temp_4/PCOUT[47]
+                         net (fo=1, routed)           0.002    15.592    u_FIR_Interpolation/add_temp_4_n_106
+    DSP48_X1Y37          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    16.847 r  u_FIR_Interpolation/add_temp_5/PCOUT[47]
+                         net (fo=1, routed)           0.002    16.849    u_FIR_Interpolation/add_temp_5_n_106
+    DSP48_X1Y38          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    18.104 r  u_FIR_Interpolation/add_temp_6/PCOUT[47]
+                         net (fo=1, routed)           0.002    18.106    u_FIR_Interpolation/add_temp_6_n_106
+    DSP48_X1Y39          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    19.361 r  u_FIR_Interpolation/add_temp_7/PCOUT[47]
+                         net (fo=1, routed)           0.002    19.363    u_FIR_Interpolation/add_temp_7_n_106
+    DSP48_X1Y40          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    20.618 r  u_FIR_Interpolation/add_temp_8/PCOUT[47]
+                         net (fo=1, routed)           0.002    20.620    u_FIR_Interpolation/add_temp_8_n_106
+    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    21.875 r  u_FIR_Interpolation/add_temp_9/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.877    u_FIR_Interpolation/add_temp_9_n_106
+    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    23.132 r  u_FIR_Interpolation/add_temp_10/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.134    u_FIR_Interpolation/add_temp_10_n_106
+    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    24.389 r  u_FIR_Interpolation/add_temp_11/PCOUT[47]
+                         net (fo=1, routed)           0.002    24.391    u_FIR_Interpolation/add_temp_11_n_106
+    DSP48_X1Y44          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    25.646 r  u_FIR_Interpolation/add_temp_12/PCOUT[47]
+                         net (fo=1, routed)           0.002    25.648    u_FIR_Interpolation/add_temp_12_n_106
+    DSP48_X1Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    26.903 r  u_FIR_Interpolation/add_temp_13/PCOUT[47]
+                         net (fo=1, routed)           0.002    26.905    u_FIR_Interpolation/add_temp_13_n_106
+    DSP48_X1Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    28.160 r  u_FIR_Interpolation/add_temp_14/PCOUT[47]
+                         net (fo=1, routed)           0.002    28.162    u_FIR_Interpolation/add_temp_14_n_106
+    DSP48_X1Y47          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    29.417 r  u_FIR_Interpolation/add_temp_15/PCOUT[47]
+                         net (fo=1, routed)           0.002    29.419    u_FIR_Interpolation/add_temp_15_n_106
+    DSP48_X1Y48          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    30.674 r  u_FIR_Interpolation/add_temp_16/PCOUT[47]
+                         net (fo=1, routed)           0.002    30.676    u_FIR_Interpolation/add_temp_16_n_106
+    DSP48_X1Y49          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    31.931 r  u_FIR_Interpolation/add_temp_17/PCOUT[47]
+                         net (fo=1, routed)           0.056    31.986    u_FIR_Interpolation/add_temp_17_n_106
+    DSP48_X1Y50          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    33.241 r  u_FIR_Interpolation/add_temp_18/PCOUT[47]
+                         net (fo=1, routed)           0.002    33.243    u_FIR_Interpolation/add_temp_18_n_106
+    DSP48_X1Y51          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    34.498 r  u_FIR_Interpolation/add_temp_19/PCOUT[47]
+                         net (fo=1, routed)           0.002    34.500    u_FIR_Interpolation/add_temp_19_n_106
+    DSP48_X1Y52          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    35.755 r  u_FIR_Interpolation/add_temp_20/PCOUT[47]
+                         net (fo=1, routed)           0.002    35.757    u_FIR_Interpolation/add_temp_20_n_106
+    DSP48_X1Y53          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    37.012 r  u_FIR_Interpolation/add_temp_21/PCOUT[47]
+                         net (fo=1, routed)           0.002    37.014    u_FIR_Interpolation/add_temp_21_n_106
+    DSP48_X1Y54          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[4])
+                                                      1.107    38.121 r  u_FIR_Interpolation/add_temp_22/P[4]
+                         net (fo=1, routed)           4.038    42.160    u_FIR_Interpolation/add_temp_22_n_101
+    SLICE_X35Y36         LUT3 (Prop_lut3_I0_O)        0.097    42.257 r  u_FIR_Interpolation/regout[4]_i_1/O
+                         net (fo=2, routed)           0.340    42.596    u_FFT/FIR_Interpolation_out[4]
+    SLICE_X34Y35         SRL16E                                       r  u_FFT/intdelay_reg_reg[1][4]_srl2_u_FFT_intdelay_reg_5_reg_c_0/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FIR_Interpolation/regout_reg[9]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        42.596ns  (logic 31.490ns (73.927%)  route 11.106ns (26.073%))
+  Logic Levels:           29  (DSP48E1=23 FDCE=1 LUT3=2 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y11         FDCE                         0.000     0.000 r  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+    SLICE_X33Y11         FDCE (Prop_fdce_C_Q)         0.341     0.341 f  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/Q
+                         net (fo=121, routed)         2.804     3.145    u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0_n_0
+    SLICE_X29Y15         LUT3 (Prop_lut3_I1_O)        0.101     3.246 r  u_FIR_Interpolation/add_temp_i_29/O
+                         net (fo=6, routed)           0.992     4.239    u_FIR_Interpolation/add_temp_i_29_n_0
+    SLICE_X26Y12         LUT6 (Prop_lut6_I3_O)        0.239     4.478 r  u_FIR_Interpolation/add_temp_i_21/O
+                         net (fo=1, routed)           0.000     4.478    u_FIR_Interpolation/add_temp_i_21_n_0
+    SLICE_X26Y12         MUXF7 (Prop_muxf7_I1_O)      0.167     4.645 r  u_FIR_Interpolation/add_temp_i_10/O
+                         net (fo=1, routed)           0.304     4.949    u_FIR_Interpolation/add_temp_i_10_n_0
+    SLICE_X26Y12         LUT5 (Prop_lut5_I0_O)        0.229     5.178 r  u_FIR_Interpolation/add_temp_i_3/O
+                         net (fo=1, routed)           2.546     7.724    u_FIR_Interpolation/product_mux_22[1]
+    DSP48_X1Y32          DSP48E1 (Prop_dsp48e1_B[1]_PCOUT[47])
+                                                      2.838    10.562 r  u_FIR_Interpolation/add_temp/PCOUT[47]
+                         net (fo=1, routed)           0.002    10.564    u_FIR_Interpolation/add_temp_n_106
+    DSP48_X1Y33          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    11.819 r  u_FIR_Interpolation/add_temp_1/PCOUT[47]
+                         net (fo=1, routed)           0.002    11.821    u_FIR_Interpolation/add_temp_1_n_106
+    DSP48_X1Y34          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    13.076 r  u_FIR_Interpolation/add_temp_2/PCOUT[47]
+                         net (fo=1, routed)           0.002    13.078    u_FIR_Interpolation/add_temp_2_n_106
+    DSP48_X1Y35          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    14.333 r  u_FIR_Interpolation/add_temp_3/PCOUT[47]
+                         net (fo=1, routed)           0.002    14.335    u_FIR_Interpolation/add_temp_3_n_106
+    DSP48_X1Y36          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    15.590 r  u_FIR_Interpolation/add_temp_4/PCOUT[47]
+                         net (fo=1, routed)           0.002    15.592    u_FIR_Interpolation/add_temp_4_n_106
+    DSP48_X1Y37          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    16.847 r  u_FIR_Interpolation/add_temp_5/PCOUT[47]
+                         net (fo=1, routed)           0.002    16.849    u_FIR_Interpolation/add_temp_5_n_106
+    DSP48_X1Y38          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    18.104 r  u_FIR_Interpolation/add_temp_6/PCOUT[47]
+                         net (fo=1, routed)           0.002    18.106    u_FIR_Interpolation/add_temp_6_n_106
+    DSP48_X1Y39          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    19.361 r  u_FIR_Interpolation/add_temp_7/PCOUT[47]
+                         net (fo=1, routed)           0.002    19.363    u_FIR_Interpolation/add_temp_7_n_106
+    DSP48_X1Y40          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    20.618 r  u_FIR_Interpolation/add_temp_8/PCOUT[47]
+                         net (fo=1, routed)           0.002    20.620    u_FIR_Interpolation/add_temp_8_n_106
+    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    21.875 r  u_FIR_Interpolation/add_temp_9/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.877    u_FIR_Interpolation/add_temp_9_n_106
+    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    23.132 r  u_FIR_Interpolation/add_temp_10/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.134    u_FIR_Interpolation/add_temp_10_n_106
+    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    24.389 r  u_FIR_Interpolation/add_temp_11/PCOUT[47]
+                         net (fo=1, routed)           0.002    24.391    u_FIR_Interpolation/add_temp_11_n_106
+    DSP48_X1Y44          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    25.646 r  u_FIR_Interpolation/add_temp_12/PCOUT[47]
+                         net (fo=1, routed)           0.002    25.648    u_FIR_Interpolation/add_temp_12_n_106
+    DSP48_X1Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    26.903 r  u_FIR_Interpolation/add_temp_13/PCOUT[47]
+                         net (fo=1, routed)           0.002    26.905    u_FIR_Interpolation/add_temp_13_n_106
+    DSP48_X1Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    28.160 r  u_FIR_Interpolation/add_temp_14/PCOUT[47]
+                         net (fo=1, routed)           0.002    28.162    u_FIR_Interpolation/add_temp_14_n_106
+    DSP48_X1Y47          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    29.417 r  u_FIR_Interpolation/add_temp_15/PCOUT[47]
+                         net (fo=1, routed)           0.002    29.419    u_FIR_Interpolation/add_temp_15_n_106
+    DSP48_X1Y48          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    30.674 r  u_FIR_Interpolation/add_temp_16/PCOUT[47]
+                         net (fo=1, routed)           0.002    30.676    u_FIR_Interpolation/add_temp_16_n_106
+    DSP48_X1Y49          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    31.931 r  u_FIR_Interpolation/add_temp_17/PCOUT[47]
+                         net (fo=1, routed)           0.056    31.986    u_FIR_Interpolation/add_temp_17_n_106
+    DSP48_X1Y50          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    33.241 r  u_FIR_Interpolation/add_temp_18/PCOUT[47]
+                         net (fo=1, routed)           0.002    33.243    u_FIR_Interpolation/add_temp_18_n_106
+    DSP48_X1Y51          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    34.498 r  u_FIR_Interpolation/add_temp_19/PCOUT[47]
+                         net (fo=1, routed)           0.002    34.500    u_FIR_Interpolation/add_temp_19_n_106
+    DSP48_X1Y52          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    35.755 r  u_FIR_Interpolation/add_temp_20/PCOUT[47]
+                         net (fo=1, routed)           0.002    35.757    u_FIR_Interpolation/add_temp_20_n_106
+    DSP48_X1Y53          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    37.012 r  u_FIR_Interpolation/add_temp_21/PCOUT[47]
+                         net (fo=1, routed)           0.002    37.014    u_FIR_Interpolation/add_temp_21_n_106
+    DSP48_X1Y54          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[9])
+                                                      1.107    38.121 r  u_FIR_Interpolation/add_temp_22/P[9]
+                         net (fo=1, routed)           3.824    41.945    u_FIR_Interpolation/add_temp_22_n_96
+    SLICE_X36Y37         LUT3 (Prop_lut3_I0_O)        0.113    42.058 r  u_FIR_Interpolation/regout[9]_i_1/O
+                         net (fo=2, routed)           0.538    42.596    u_FIR_Interpolation/FIR_Interpolation_out[9]
+    SLICE_X36Y37         FDCE                                         r  u_FIR_Interpolation/regout_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FFT/intdelay_reg_reg[1][6]_srl2_u_FFT_intdelay_reg_5_reg_c_0/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        42.564ns  (logic 31.474ns (73.946%)  route 11.090ns (26.054%))
+  Logic Levels:           29  (DSP48E1=23 FDCE=1 LUT3=2 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y11         FDCE                         0.000     0.000 r  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+    SLICE_X33Y11         FDCE (Prop_fdce_C_Q)         0.341     0.341 f  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/Q
+                         net (fo=121, routed)         2.804     3.145    u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0_n_0
+    SLICE_X29Y15         LUT3 (Prop_lut3_I1_O)        0.101     3.246 r  u_FIR_Interpolation/add_temp_i_29/O
+                         net (fo=6, routed)           0.992     4.239    u_FIR_Interpolation/add_temp_i_29_n_0
+    SLICE_X26Y12         LUT6 (Prop_lut6_I3_O)        0.239     4.478 r  u_FIR_Interpolation/add_temp_i_21/O
+                         net (fo=1, routed)           0.000     4.478    u_FIR_Interpolation/add_temp_i_21_n_0
+    SLICE_X26Y12         MUXF7 (Prop_muxf7_I1_O)      0.167     4.645 r  u_FIR_Interpolation/add_temp_i_10/O
+                         net (fo=1, routed)           0.304     4.949    u_FIR_Interpolation/add_temp_i_10_n_0
+    SLICE_X26Y12         LUT5 (Prop_lut5_I0_O)        0.229     5.178 r  u_FIR_Interpolation/add_temp_i_3/O
+                         net (fo=1, routed)           2.546     7.724    u_FIR_Interpolation/product_mux_22[1]
+    DSP48_X1Y32          DSP48E1 (Prop_dsp48e1_B[1]_PCOUT[47])
+                                                      2.838    10.562 r  u_FIR_Interpolation/add_temp/PCOUT[47]
+                         net (fo=1, routed)           0.002    10.564    u_FIR_Interpolation/add_temp_n_106
+    DSP48_X1Y33          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    11.819 r  u_FIR_Interpolation/add_temp_1/PCOUT[47]
+                         net (fo=1, routed)           0.002    11.821    u_FIR_Interpolation/add_temp_1_n_106
+    DSP48_X1Y34          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    13.076 r  u_FIR_Interpolation/add_temp_2/PCOUT[47]
+                         net (fo=1, routed)           0.002    13.078    u_FIR_Interpolation/add_temp_2_n_106
+    DSP48_X1Y35          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    14.333 r  u_FIR_Interpolation/add_temp_3/PCOUT[47]
+                         net (fo=1, routed)           0.002    14.335    u_FIR_Interpolation/add_temp_3_n_106
+    DSP48_X1Y36          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    15.590 r  u_FIR_Interpolation/add_temp_4/PCOUT[47]
+                         net (fo=1, routed)           0.002    15.592    u_FIR_Interpolation/add_temp_4_n_106
+    DSP48_X1Y37          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    16.847 r  u_FIR_Interpolation/add_temp_5/PCOUT[47]
+                         net (fo=1, routed)           0.002    16.849    u_FIR_Interpolation/add_temp_5_n_106
+    DSP48_X1Y38          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    18.104 r  u_FIR_Interpolation/add_temp_6/PCOUT[47]
+                         net (fo=1, routed)           0.002    18.106    u_FIR_Interpolation/add_temp_6_n_106
+    DSP48_X1Y39          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    19.361 r  u_FIR_Interpolation/add_temp_7/PCOUT[47]
+                         net (fo=1, routed)           0.002    19.363    u_FIR_Interpolation/add_temp_7_n_106
+    DSP48_X1Y40          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    20.618 r  u_FIR_Interpolation/add_temp_8/PCOUT[47]
+                         net (fo=1, routed)           0.002    20.620    u_FIR_Interpolation/add_temp_8_n_106
+    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    21.875 r  u_FIR_Interpolation/add_temp_9/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.877    u_FIR_Interpolation/add_temp_9_n_106
+    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    23.132 r  u_FIR_Interpolation/add_temp_10/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.134    u_FIR_Interpolation/add_temp_10_n_106
+    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    24.389 r  u_FIR_Interpolation/add_temp_11/PCOUT[47]
+                         net (fo=1, routed)           0.002    24.391    u_FIR_Interpolation/add_temp_11_n_106
+    DSP48_X1Y44          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    25.646 r  u_FIR_Interpolation/add_temp_12/PCOUT[47]
+                         net (fo=1, routed)           0.002    25.648    u_FIR_Interpolation/add_temp_12_n_106
+    DSP48_X1Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    26.903 r  u_FIR_Interpolation/add_temp_13/PCOUT[47]
+                         net (fo=1, routed)           0.002    26.905    u_FIR_Interpolation/add_temp_13_n_106
+    DSP48_X1Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    28.160 r  u_FIR_Interpolation/add_temp_14/PCOUT[47]
+                         net (fo=1, routed)           0.002    28.162    u_FIR_Interpolation/add_temp_14_n_106
+    DSP48_X1Y47          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    29.417 r  u_FIR_Interpolation/add_temp_15/PCOUT[47]
+                         net (fo=1, routed)           0.002    29.419    u_FIR_Interpolation/add_temp_15_n_106
+    DSP48_X1Y48          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    30.674 r  u_FIR_Interpolation/add_temp_16/PCOUT[47]
+                         net (fo=1, routed)           0.002    30.676    u_FIR_Interpolation/add_temp_16_n_106
+    DSP48_X1Y49          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    31.931 r  u_FIR_Interpolation/add_temp_17/PCOUT[47]
+                         net (fo=1, routed)           0.056    31.986    u_FIR_Interpolation/add_temp_17_n_106
+    DSP48_X1Y50          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    33.241 r  u_FIR_Interpolation/add_temp_18/PCOUT[47]
+                         net (fo=1, routed)           0.002    33.243    u_FIR_Interpolation/add_temp_18_n_106
+    DSP48_X1Y51          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    34.498 r  u_FIR_Interpolation/add_temp_19/PCOUT[47]
+                         net (fo=1, routed)           0.002    34.500    u_FIR_Interpolation/add_temp_19_n_106
+    DSP48_X1Y52          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    35.755 r  u_FIR_Interpolation/add_temp_20/PCOUT[47]
+                         net (fo=1, routed)           0.002    35.757    u_FIR_Interpolation/add_temp_20_n_106
+    DSP48_X1Y53          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    37.012 r  u_FIR_Interpolation/add_temp_21/PCOUT[47]
+                         net (fo=1, routed)           0.002    37.014    u_FIR_Interpolation/add_temp_21_n_106
+    DSP48_X1Y54          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[6])
+                                                      1.107    38.121 r  u_FIR_Interpolation/add_temp_22/P[6]
+                         net (fo=1, routed)           3.900    42.021    u_FIR_Interpolation/add_temp_22_n_99
+    SLICE_X35Y36         LUT3 (Prop_lut3_I0_O)        0.097    42.118 r  u_FIR_Interpolation/regout[6]_i_1/O
+                         net (fo=2, routed)           0.446    42.564    u_FFT/FIR_Interpolation_out[6]
+    SLICE_X34Y31         SRL16E                                       r  u_FFT/intdelay_reg_reg[1][6]_srl2_u_FFT_intdelay_reg_5_reg_c_0/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FFT/intdelay_reg_reg[1][14]_srl2_u_FFT_intdelay_reg_5_reg_c_0/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        42.501ns  (logic 31.474ns (74.055%)  route 11.027ns (25.945%))
+  Logic Levels:           29  (DSP48E1=23 FDCE=1 LUT3=2 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y11         FDCE                         0.000     0.000 r  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+    SLICE_X33Y11         FDCE (Prop_fdce_C_Q)         0.341     0.341 f  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/Q
+                         net (fo=121, routed)         2.804     3.145    u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0_n_0
+    SLICE_X29Y15         LUT3 (Prop_lut3_I1_O)        0.101     3.246 r  u_FIR_Interpolation/add_temp_i_29/O
+                         net (fo=6, routed)           0.992     4.239    u_FIR_Interpolation/add_temp_i_29_n_0
+    SLICE_X26Y12         LUT6 (Prop_lut6_I3_O)        0.239     4.478 r  u_FIR_Interpolation/add_temp_i_21/O
+                         net (fo=1, routed)           0.000     4.478    u_FIR_Interpolation/add_temp_i_21_n_0
+    SLICE_X26Y12         MUXF7 (Prop_muxf7_I1_O)      0.167     4.645 r  u_FIR_Interpolation/add_temp_i_10/O
+                         net (fo=1, routed)           0.304     4.949    u_FIR_Interpolation/add_temp_i_10_n_0
+    SLICE_X26Y12         LUT5 (Prop_lut5_I0_O)        0.229     5.178 r  u_FIR_Interpolation/add_temp_i_3/O
+                         net (fo=1, routed)           2.546     7.724    u_FIR_Interpolation/product_mux_22[1]
+    DSP48_X1Y32          DSP48E1 (Prop_dsp48e1_B[1]_PCOUT[47])
+                                                      2.838    10.562 r  u_FIR_Interpolation/add_temp/PCOUT[47]
+                         net (fo=1, routed)           0.002    10.564    u_FIR_Interpolation/add_temp_n_106
+    DSP48_X1Y33          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    11.819 r  u_FIR_Interpolation/add_temp_1/PCOUT[47]
+                         net (fo=1, routed)           0.002    11.821    u_FIR_Interpolation/add_temp_1_n_106
+    DSP48_X1Y34          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    13.076 r  u_FIR_Interpolation/add_temp_2/PCOUT[47]
+                         net (fo=1, routed)           0.002    13.078    u_FIR_Interpolation/add_temp_2_n_106
+    DSP48_X1Y35          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    14.333 r  u_FIR_Interpolation/add_temp_3/PCOUT[47]
+                         net (fo=1, routed)           0.002    14.335    u_FIR_Interpolation/add_temp_3_n_106
+    DSP48_X1Y36          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    15.590 r  u_FIR_Interpolation/add_temp_4/PCOUT[47]
+                         net (fo=1, routed)           0.002    15.592    u_FIR_Interpolation/add_temp_4_n_106
+    DSP48_X1Y37          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    16.847 r  u_FIR_Interpolation/add_temp_5/PCOUT[47]
+                         net (fo=1, routed)           0.002    16.849    u_FIR_Interpolation/add_temp_5_n_106
+    DSP48_X1Y38          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    18.104 r  u_FIR_Interpolation/add_temp_6/PCOUT[47]
+                         net (fo=1, routed)           0.002    18.106    u_FIR_Interpolation/add_temp_6_n_106
+    DSP48_X1Y39          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    19.361 r  u_FIR_Interpolation/add_temp_7/PCOUT[47]
+                         net (fo=1, routed)           0.002    19.363    u_FIR_Interpolation/add_temp_7_n_106
+    DSP48_X1Y40          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    20.618 r  u_FIR_Interpolation/add_temp_8/PCOUT[47]
+                         net (fo=1, routed)           0.002    20.620    u_FIR_Interpolation/add_temp_8_n_106
+    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    21.875 r  u_FIR_Interpolation/add_temp_9/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.877    u_FIR_Interpolation/add_temp_9_n_106
+    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    23.132 r  u_FIR_Interpolation/add_temp_10/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.134    u_FIR_Interpolation/add_temp_10_n_106
+    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    24.389 r  u_FIR_Interpolation/add_temp_11/PCOUT[47]
+                         net (fo=1, routed)           0.002    24.391    u_FIR_Interpolation/add_temp_11_n_106
+    DSP48_X1Y44          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    25.646 r  u_FIR_Interpolation/add_temp_12/PCOUT[47]
+                         net (fo=1, routed)           0.002    25.648    u_FIR_Interpolation/add_temp_12_n_106
+    DSP48_X1Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    26.903 r  u_FIR_Interpolation/add_temp_13/PCOUT[47]
+                         net (fo=1, routed)           0.002    26.905    u_FIR_Interpolation/add_temp_13_n_106
+    DSP48_X1Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    28.160 r  u_FIR_Interpolation/add_temp_14/PCOUT[47]
+                         net (fo=1, routed)           0.002    28.162    u_FIR_Interpolation/add_temp_14_n_106
+    DSP48_X1Y47          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    29.417 r  u_FIR_Interpolation/add_temp_15/PCOUT[47]
+                         net (fo=1, routed)           0.002    29.419    u_FIR_Interpolation/add_temp_15_n_106
+    DSP48_X1Y48          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    30.674 r  u_FIR_Interpolation/add_temp_16/PCOUT[47]
+                         net (fo=1, routed)           0.002    30.676    u_FIR_Interpolation/add_temp_16_n_106
+    DSP48_X1Y49          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    31.931 r  u_FIR_Interpolation/add_temp_17/PCOUT[47]
+                         net (fo=1, routed)           0.056    31.986    u_FIR_Interpolation/add_temp_17_n_106
+    DSP48_X1Y50          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    33.241 r  u_FIR_Interpolation/add_temp_18/PCOUT[47]
+                         net (fo=1, routed)           0.002    33.243    u_FIR_Interpolation/add_temp_18_n_106
+    DSP48_X1Y51          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    34.498 r  u_FIR_Interpolation/add_temp_19/PCOUT[47]
+                         net (fo=1, routed)           0.002    34.500    u_FIR_Interpolation/add_temp_19_n_106
+    DSP48_X1Y52          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    35.755 r  u_FIR_Interpolation/add_temp_20/PCOUT[47]
+                         net (fo=1, routed)           0.002    35.757    u_FIR_Interpolation/add_temp_20_n_106
+    DSP48_X1Y53          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    37.012 r  u_FIR_Interpolation/add_temp_21/PCOUT[47]
+                         net (fo=1, routed)           0.002    37.014    u_FIR_Interpolation/add_temp_21_n_106
+    DSP48_X1Y54          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[14])
+                                                      1.107    38.121 r  u_FIR_Interpolation/add_temp_22/P[14]
+                         net (fo=1, routed)           3.736    41.857    u_FIR_Interpolation/add_temp_22_n_91
+    SLICE_X40Y36         LUT3 (Prop_lut3_I0_O)        0.097    41.954 r  u_FIR_Interpolation/regout[14]_i_1/O
+                         net (fo=2, routed)           0.547    42.501    u_FFT/FIR_Interpolation_out[14]
+    SLICE_X34Y32         SRL16E                                       r  u_FFT/intdelay_reg_reg[1][14]_srl2_u_FFT_intdelay_reg_5_reg_c_0/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FFT/intdelay_reg_reg[1][21]_srl2_u_FFT_intdelay_reg_5_reg_c_0/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        42.496ns  (logic 31.478ns (74.074%)  route 11.018ns (25.926%))
+  Logic Levels:           29  (DSP48E1=23 FDCE=1 LUT3=2 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y11         FDCE                         0.000     0.000 r  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+    SLICE_X33Y11         FDCE (Prop_fdce_C_Q)         0.341     0.341 f  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/Q
+                         net (fo=121, routed)         2.804     3.145    u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0_n_0
+    SLICE_X29Y15         LUT3 (Prop_lut3_I1_O)        0.101     3.246 r  u_FIR_Interpolation/add_temp_i_29/O
+                         net (fo=6, routed)           0.992     4.239    u_FIR_Interpolation/add_temp_i_29_n_0
+    SLICE_X26Y12         LUT6 (Prop_lut6_I3_O)        0.239     4.478 r  u_FIR_Interpolation/add_temp_i_21/O
+                         net (fo=1, routed)           0.000     4.478    u_FIR_Interpolation/add_temp_i_21_n_0
+    SLICE_X26Y12         MUXF7 (Prop_muxf7_I1_O)      0.167     4.645 r  u_FIR_Interpolation/add_temp_i_10/O
+                         net (fo=1, routed)           0.304     4.949    u_FIR_Interpolation/add_temp_i_10_n_0
+    SLICE_X26Y12         LUT5 (Prop_lut5_I0_O)        0.229     5.178 r  u_FIR_Interpolation/add_temp_i_3/O
+                         net (fo=1, routed)           2.546     7.724    u_FIR_Interpolation/product_mux_22[1]
+    DSP48_X1Y32          DSP48E1 (Prop_dsp48e1_B[1]_PCOUT[47])
+                                                      2.838    10.562 r  u_FIR_Interpolation/add_temp/PCOUT[47]
+                         net (fo=1, routed)           0.002    10.564    u_FIR_Interpolation/add_temp_n_106
+    DSP48_X1Y33          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    11.819 r  u_FIR_Interpolation/add_temp_1/PCOUT[47]
+                         net (fo=1, routed)           0.002    11.821    u_FIR_Interpolation/add_temp_1_n_106
+    DSP48_X1Y34          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    13.076 r  u_FIR_Interpolation/add_temp_2/PCOUT[47]
+                         net (fo=1, routed)           0.002    13.078    u_FIR_Interpolation/add_temp_2_n_106
+    DSP48_X1Y35          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    14.333 r  u_FIR_Interpolation/add_temp_3/PCOUT[47]
+                         net (fo=1, routed)           0.002    14.335    u_FIR_Interpolation/add_temp_3_n_106
+    DSP48_X1Y36          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    15.590 r  u_FIR_Interpolation/add_temp_4/PCOUT[47]
+                         net (fo=1, routed)           0.002    15.592    u_FIR_Interpolation/add_temp_4_n_106
+    DSP48_X1Y37          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    16.847 r  u_FIR_Interpolation/add_temp_5/PCOUT[47]
+                         net (fo=1, routed)           0.002    16.849    u_FIR_Interpolation/add_temp_5_n_106
+    DSP48_X1Y38          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    18.104 r  u_FIR_Interpolation/add_temp_6/PCOUT[47]
+                         net (fo=1, routed)           0.002    18.106    u_FIR_Interpolation/add_temp_6_n_106
+    DSP48_X1Y39          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    19.361 r  u_FIR_Interpolation/add_temp_7/PCOUT[47]
+                         net (fo=1, routed)           0.002    19.363    u_FIR_Interpolation/add_temp_7_n_106
+    DSP48_X1Y40          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    20.618 r  u_FIR_Interpolation/add_temp_8/PCOUT[47]
+                         net (fo=1, routed)           0.002    20.620    u_FIR_Interpolation/add_temp_8_n_106
+    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    21.875 r  u_FIR_Interpolation/add_temp_9/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.877    u_FIR_Interpolation/add_temp_9_n_106
+    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    23.132 r  u_FIR_Interpolation/add_temp_10/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.134    u_FIR_Interpolation/add_temp_10_n_106
+    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    24.389 r  u_FIR_Interpolation/add_temp_11/PCOUT[47]
+                         net (fo=1, routed)           0.002    24.391    u_FIR_Interpolation/add_temp_11_n_106
+    DSP48_X1Y44          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    25.646 r  u_FIR_Interpolation/add_temp_12/PCOUT[47]
+                         net (fo=1, routed)           0.002    25.648    u_FIR_Interpolation/add_temp_12_n_106
+    DSP48_X1Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    26.903 r  u_FIR_Interpolation/add_temp_13/PCOUT[47]
+                         net (fo=1, routed)           0.002    26.905    u_FIR_Interpolation/add_temp_13_n_106
+    DSP48_X1Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    28.160 r  u_FIR_Interpolation/add_temp_14/PCOUT[47]
+                         net (fo=1, routed)           0.002    28.162    u_FIR_Interpolation/add_temp_14_n_106
+    DSP48_X1Y47          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    29.417 r  u_FIR_Interpolation/add_temp_15/PCOUT[47]
+                         net (fo=1, routed)           0.002    29.419    u_FIR_Interpolation/add_temp_15_n_106
+    DSP48_X1Y48          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    30.674 r  u_FIR_Interpolation/add_temp_16/PCOUT[47]
+                         net (fo=1, routed)           0.002    30.676    u_FIR_Interpolation/add_temp_16_n_106
+    DSP48_X1Y49          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    31.931 r  u_FIR_Interpolation/add_temp_17/PCOUT[47]
+                         net (fo=1, routed)           0.056    31.986    u_FIR_Interpolation/add_temp_17_n_106
+    DSP48_X1Y50          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    33.241 r  u_FIR_Interpolation/add_temp_18/PCOUT[47]
+                         net (fo=1, routed)           0.002    33.243    u_FIR_Interpolation/add_temp_18_n_106
+    DSP48_X1Y51          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    34.498 r  u_FIR_Interpolation/add_temp_19/PCOUT[47]
+                         net (fo=1, routed)           0.002    34.500    u_FIR_Interpolation/add_temp_19_n_106
+    DSP48_X1Y52          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    35.755 r  u_FIR_Interpolation/add_temp_20/PCOUT[47]
+                         net (fo=1, routed)           0.002    35.757    u_FIR_Interpolation/add_temp_20_n_106
+    DSP48_X1Y53          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    37.012 r  u_FIR_Interpolation/add_temp_21/PCOUT[47]
+                         net (fo=1, routed)           0.002    37.014    u_FIR_Interpolation/add_temp_21_n_106
+    DSP48_X1Y54          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[21])
+                                                      1.107    38.121 r  u_FIR_Interpolation/add_temp_22/P[21]
+                         net (fo=1, routed)           3.824    41.946    u_FIR_Interpolation/add_temp_22_n_84
+    SLICE_X35Y37         LUT3 (Prop_lut3_I0_O)        0.101    42.047 r  u_FIR_Interpolation/regout[21]_i_1/O
+                         net (fo=2, routed)           0.449    42.496    u_FFT/FIR_Interpolation_out[21]
+    SLICE_X30Y36         SRL16E                                       r  u_FFT/intdelay_reg_reg[1][21]_srl2_u_FFT_intdelay_reg_5_reg_c_0/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FIR_Interpolation/regout_reg[6]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        42.488ns  (logic 31.474ns (74.078%)  route 11.014ns (25.922%))
+  Logic Levels:           29  (DSP48E1=23 FDCE=1 LUT3=2 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y11         FDCE                         0.000     0.000 r  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/C
+    SLICE_X33Y11         FDCE (Prop_fdce_C_Q)         0.341     0.341 f  u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0/Q
+                         net (fo=121, routed)         2.804     3.145    u_FIR_Interpolation/cur_count_reg_rep[0]_rep__0_n_0
+    SLICE_X29Y15         LUT3 (Prop_lut3_I1_O)        0.101     3.246 r  u_FIR_Interpolation/add_temp_i_29/O
+                         net (fo=6, routed)           0.992     4.239    u_FIR_Interpolation/add_temp_i_29_n_0
+    SLICE_X26Y12         LUT6 (Prop_lut6_I3_O)        0.239     4.478 r  u_FIR_Interpolation/add_temp_i_21/O
+                         net (fo=1, routed)           0.000     4.478    u_FIR_Interpolation/add_temp_i_21_n_0
+    SLICE_X26Y12         MUXF7 (Prop_muxf7_I1_O)      0.167     4.645 r  u_FIR_Interpolation/add_temp_i_10/O
+                         net (fo=1, routed)           0.304     4.949    u_FIR_Interpolation/add_temp_i_10_n_0
+    SLICE_X26Y12         LUT5 (Prop_lut5_I0_O)        0.229     5.178 r  u_FIR_Interpolation/add_temp_i_3/O
+                         net (fo=1, routed)           2.546     7.724    u_FIR_Interpolation/product_mux_22[1]
+    DSP48_X1Y32          DSP48E1 (Prop_dsp48e1_B[1]_PCOUT[47])
+                                                      2.838    10.562 r  u_FIR_Interpolation/add_temp/PCOUT[47]
+                         net (fo=1, routed)           0.002    10.564    u_FIR_Interpolation/add_temp_n_106
+    DSP48_X1Y33          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    11.819 r  u_FIR_Interpolation/add_temp_1/PCOUT[47]
+                         net (fo=1, routed)           0.002    11.821    u_FIR_Interpolation/add_temp_1_n_106
+    DSP48_X1Y34          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    13.076 r  u_FIR_Interpolation/add_temp_2/PCOUT[47]
+                         net (fo=1, routed)           0.002    13.078    u_FIR_Interpolation/add_temp_2_n_106
+    DSP48_X1Y35          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    14.333 r  u_FIR_Interpolation/add_temp_3/PCOUT[47]
+                         net (fo=1, routed)           0.002    14.335    u_FIR_Interpolation/add_temp_3_n_106
+    DSP48_X1Y36          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    15.590 r  u_FIR_Interpolation/add_temp_4/PCOUT[47]
+                         net (fo=1, routed)           0.002    15.592    u_FIR_Interpolation/add_temp_4_n_106
+    DSP48_X1Y37          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    16.847 r  u_FIR_Interpolation/add_temp_5/PCOUT[47]
+                         net (fo=1, routed)           0.002    16.849    u_FIR_Interpolation/add_temp_5_n_106
+    DSP48_X1Y38          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    18.104 r  u_FIR_Interpolation/add_temp_6/PCOUT[47]
+                         net (fo=1, routed)           0.002    18.106    u_FIR_Interpolation/add_temp_6_n_106
+    DSP48_X1Y39          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    19.361 r  u_FIR_Interpolation/add_temp_7/PCOUT[47]
+                         net (fo=1, routed)           0.002    19.363    u_FIR_Interpolation/add_temp_7_n_106
+    DSP48_X1Y40          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    20.618 r  u_FIR_Interpolation/add_temp_8/PCOUT[47]
+                         net (fo=1, routed)           0.002    20.620    u_FIR_Interpolation/add_temp_8_n_106
+    DSP48_X1Y41          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    21.875 r  u_FIR_Interpolation/add_temp_9/PCOUT[47]
+                         net (fo=1, routed)           0.002    21.877    u_FIR_Interpolation/add_temp_9_n_106
+    DSP48_X1Y42          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    23.132 r  u_FIR_Interpolation/add_temp_10/PCOUT[47]
+                         net (fo=1, routed)           0.002    23.134    u_FIR_Interpolation/add_temp_10_n_106
+    DSP48_X1Y43          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    24.389 r  u_FIR_Interpolation/add_temp_11/PCOUT[47]
+                         net (fo=1, routed)           0.002    24.391    u_FIR_Interpolation/add_temp_11_n_106
+    DSP48_X1Y44          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    25.646 r  u_FIR_Interpolation/add_temp_12/PCOUT[47]
+                         net (fo=1, routed)           0.002    25.648    u_FIR_Interpolation/add_temp_12_n_106
+    DSP48_X1Y45          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    26.903 r  u_FIR_Interpolation/add_temp_13/PCOUT[47]
+                         net (fo=1, routed)           0.002    26.905    u_FIR_Interpolation/add_temp_13_n_106
+    DSP48_X1Y46          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    28.160 r  u_FIR_Interpolation/add_temp_14/PCOUT[47]
+                         net (fo=1, routed)           0.002    28.162    u_FIR_Interpolation/add_temp_14_n_106
+    DSP48_X1Y47          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    29.417 r  u_FIR_Interpolation/add_temp_15/PCOUT[47]
+                         net (fo=1, routed)           0.002    29.419    u_FIR_Interpolation/add_temp_15_n_106
+    DSP48_X1Y48          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    30.674 r  u_FIR_Interpolation/add_temp_16/PCOUT[47]
+                         net (fo=1, routed)           0.002    30.676    u_FIR_Interpolation/add_temp_16_n_106
+    DSP48_X1Y49          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    31.931 r  u_FIR_Interpolation/add_temp_17/PCOUT[47]
+                         net (fo=1, routed)           0.056    31.986    u_FIR_Interpolation/add_temp_17_n_106
+    DSP48_X1Y50          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    33.241 r  u_FIR_Interpolation/add_temp_18/PCOUT[47]
+                         net (fo=1, routed)           0.002    33.243    u_FIR_Interpolation/add_temp_18_n_106
+    DSP48_X1Y51          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    34.498 r  u_FIR_Interpolation/add_temp_19/PCOUT[47]
+                         net (fo=1, routed)           0.002    34.500    u_FIR_Interpolation/add_temp_19_n_106
+    DSP48_X1Y52          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    35.755 r  u_FIR_Interpolation/add_temp_20/PCOUT[47]
+                         net (fo=1, routed)           0.002    35.757    u_FIR_Interpolation/add_temp_20_n_106
+    DSP48_X1Y53          DSP48E1 (Prop_dsp48e1_PCIN[47]_PCOUT[47])
+                                                      1.255    37.012 r  u_FIR_Interpolation/add_temp_21/PCOUT[47]
+                         net (fo=1, routed)           0.002    37.014    u_FIR_Interpolation/add_temp_21_n_106
+    DSP48_X1Y54          DSP48E1 (Prop_dsp48e1_PCIN[47]_P[6])
+                                                      1.107    38.121 r  u_FIR_Interpolation/add_temp_22/P[6]
+                         net (fo=1, routed)           3.900    42.021    u_FIR_Interpolation/add_temp_22_n_99
+    SLICE_X35Y36         LUT3 (Prop_lut3_I0_O)        0.097    42.118 r  u_FIR_Interpolation/regout[6]_i_1/O
+                         net (fo=2, routed)           0.370    42.488    u_FIR_Interpolation/FIR_Interpolation_out[6]
+    SLICE_X35Y36         FDCE                                         r  u_FIR_Interpolation/regout_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 u_FFT/u_SDF1_3_1/Radix22ButterflyG1_dinXtwdl_re_dly1_reg[13]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FFT/u_SDF1_3_1/Radix22ButterflyG1_dinXtwdl_re_dly2_reg[13]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.178ns  (logic 0.128ns (71.912%)  route 0.050ns (28.088%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y21         FDCE                         0.000     0.000 r  u_FFT/u_SDF1_3_1/Radix22ButterflyG1_dinXtwdl_re_dly1_reg[13]/C
+    SLICE_X65Y21         FDCE (Prop_fdce_C_Q)         0.128     0.128 r  u_FFT/u_SDF1_3_1/Radix22ButterflyG1_dinXtwdl_re_dly1_reg[13]/Q
+                         net (fo=1, routed)           0.050     0.178    u_FFT/u_SDF1_3_1/Radix22ButterflyG1_dinXtwdl_re_dly1[13]
+    SLICE_X65Y21         FDCE                                         r  u_FFT/u_SDF1_3_1/Radix22ButterflyG1_dinXtwdl_re_dly2_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FFT/u_SDF1_3_1/Radix22ButterflyG1_dinXtwdl_re_dly1_reg[14]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FFT/u_SDF1_3_1/Radix22ButterflyG1_dinXtwdl_re_dly2_reg[14]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.178ns  (logic 0.128ns (71.912%)  route 0.050ns (28.088%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y22         FDCE                         0.000     0.000 r  u_FFT/u_SDF1_3_1/Radix22ButterflyG1_dinXtwdl_re_dly1_reg[14]/C
+    SLICE_X65Y22         FDCE (Prop_fdce_C_Q)         0.128     0.128 r  u_FFT/u_SDF1_3_1/Radix22ButterflyG1_dinXtwdl_re_dly1_reg[14]/Q
+                         net (fo=1, routed)           0.050     0.178    u_FFT/u_SDF1_3_1/Radix22ButterflyG1_dinXtwdl_re_dly1[14]
+    SLICE_X65Y22         FDCE                                         r  u_FFT/u_SDF1_3_1/Radix22ButterflyG1_dinXtwdl_re_dly2_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/SDFOutmux_btf2Pipe_im_reg[29]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FFT/intdelay_reg_4_reg[1][29]_srl2_u_FFT_intdelay_reg_5_reg_c_0/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.184ns  (logic 0.128ns (69.629%)  route 0.056ns (30.371%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y28         FDCE                         0.000     0.000 r  u_FFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/SDFOutmux_btf2Pipe_im_reg[29]/C
+    SLICE_X39Y28         FDCE (Prop_fdce_C_Q)         0.128     0.128 r  u_FFT/u_SDF2_2_1/u_SDFCOMMUTATOR_2/SDFOutmux_btf2Pipe_im_reg[29]/Q
+                         net (fo=1, routed)           0.056     0.184    u_FFT/dout_2_1_im_signed[29]
+    SLICE_X38Y28         SRL16E                                       r  u_FFT/intdelay_reg_4_reg[1][29]_srl2_u_FFT_intdelay_reg_5_reg_c_0/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/SDFCummutator_wrXData_im_reg_reg[11]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4/ram_reg_0_7_6_11/RAMC_D1/I
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.184ns  (logic 0.128ns (69.629%)  route 0.056ns (30.371%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y31         FDCE                         0.000     0.000 r  u_FFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/SDFCummutator_wrXData_im_reg_reg[11]/C
+    SLICE_X61Y31         FDCE (Prop_fdce_C_Q)         0.128     0.128 r  u_FFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/SDFCummutator_wrXData_im_reg_reg[11]/Q
+                         net (fo=1, routed)           0.056     0.184    u_FFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4/ram_reg_0_7_6_11/DIC1
+    SLICE_X60Y31         RAMD32                                       r  u_FFT/u_SDF2_4_1/u_SDFCOMMUTATOR_4/u_dataXMEM_im_0_4/ram_reg_0_7_6_11/RAMC_D1/I
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FFT/u_twdlROM_5_1/Radix22TwdlMapping_octantReg1_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FFT/u_twdlROM_5_1/twdlOctantReg_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.184ns  (logic 0.128ns (69.629%)  route 0.056ns (30.371%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X75Y54         FDCE                         0.000     0.000 r  u_FFT/u_twdlROM_5_1/Radix22TwdlMapping_octantReg1_reg[1]/C
+    SLICE_X75Y54         FDCE (Prop_fdce_C_Q)         0.128     0.128 r  u_FFT/u_twdlROM_5_1/Radix22TwdlMapping_octantReg1_reg[1]/Q
+                         net (fo=1, routed)           0.056     0.184    u_FFT/u_twdlROM_5_1/Radix22TwdlMapping_octantReg1[1]
+    SLICE_X74Y54         FDCE                                         r  u_FFT/u_twdlROM_5_1/twdlOctantReg_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/SDFOutmux_btf2Pipe_re_reg[28]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FFT/u_SDF2_2_1/Radix22ButterflyG2_din_re_dly_reg[28]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.186ns  (logic 0.128ns (68.772%)  route 0.058ns (31.228%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X29Y34         FDCE                         0.000     0.000 r  u_FFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/SDFOutmux_btf2Pipe_re_reg[28]/C
+    SLICE_X29Y34         FDCE (Prop_fdce_C_Q)         0.128     0.128 r  u_FFT/u_SDF1_1_1/u_SDFCOMMUTATOR_1/SDFOutmux_btf2Pipe_re_reg[28]/Q
+                         net (fo=1, routed)           0.058     0.186    u_FFT/u_SDF2_2_1/D[28]
+    SLICE_X28Y34         FDCE                                         r  u_FFT/u_SDF2_2_1/Radix22ButterflyG2_din_re_dly_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FFT/u_SDF2_6_1/Radix22ButterflyG2_din_im_dly_reg[7]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FFT/u_SDF2_6_1/Radix22ButterflyG2_dinXTwdl_im_dly2_reg[7]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.189ns  (logic 0.128ns (67.837%)  route 0.061ns (32.163%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y44         FDCE                         0.000     0.000 r  u_FFT/u_SDF2_6_1/Radix22ButterflyG2_din_im_dly_reg[7]/C
+    SLICE_X55Y44         FDCE (Prop_fdce_C_Q)         0.128     0.128 r  u_FFT/u_SDF2_6_1/Radix22ButterflyG2_din_im_dly_reg[7]/Q
+                         net (fo=2, routed)           0.061     0.189    u_FFT/u_SDF2_6_1/Radix22ButterflyG2_dinXTwdl_im_dly1[7]
+    SLICE_X55Y44         FDCE                                         r  u_FFT/u_SDF2_6_1/Radix22ButterflyG2_dinXTwdl_im_dly2_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FFT/u_SDF2_10_1/u_SDFCOMMUTATOR_10/SDFCummutator_wrData_im_reg_reg[17]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FFT/u_SDF2_10_1/Radix22ButterflyG2_dinXTwdl_im_dly1_reg[17]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.191ns  (logic 0.128ns (66.907%)  route 0.063ns (33.093%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y77         FDCE                         0.000     0.000 r  u_FFT/u_SDF2_10_1/u_SDFCOMMUTATOR_10/SDFCummutator_wrData_im_reg_reg[17]/C
+    SLICE_X45Y77         FDCE (Prop_fdce_C_Q)         0.128     0.128 r  u_FFT/u_SDF2_10_1/u_SDFCOMMUTATOR_10/SDFCummutator_wrData_im_reg_reg[17]/Q
+                         net (fo=2, routed)           0.063     0.191    u_FFT/u_SDF2_10_1/btfin_im[17]
+    SLICE_X45Y77         FDCE                                         r  u_FFT/u_SDF2_10_1/Radix22ButterflyG2_dinXTwdl_im_dly1_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FFT/u_SDF2_10_1/u_SDFCOMMUTATOR_10/SDFCummutator_wrData_im_reg_reg[29]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FFT/u_SDF2_10_1/Radix22ButterflyG2_dinXTwdl_im_dly1_reg[29]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.191ns  (logic 0.128ns (66.907%)  route 0.063ns (33.093%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X45Y83         FDCE                         0.000     0.000 r  u_FFT/u_SDF2_10_1/u_SDFCOMMUTATOR_10/SDFCummutator_wrData_im_reg_reg[29]/C
+    SLICE_X45Y83         FDCE (Prop_fdce_C_Q)         0.128     0.128 r  u_FFT/u_SDF2_10_1/u_SDFCOMMUTATOR_10/SDFCummutator_wrData_im_reg_reg[29]/Q
+                         net (fo=2, routed)           0.063     0.191    u_FFT/u_SDF2_10_1/btfin_im[29]
+    SLICE_X45Y83         FDCE                                         r  u_FFT/u_SDF2_10_1/Radix22ButterflyG2_dinXTwdl_im_dly1_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_FFT/u_SDF2_6_1/Radix22ButterflyG2_din_im_dly_reg[13]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            u_FFT/u_SDF2_6_1/Radix22ButterflyG2_dinXTwdl_im_dly2_reg[13]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.191ns  (logic 0.128ns (66.907%)  route 0.063ns (33.093%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X55Y46         FDCE                         0.000     0.000 r  u_FFT/u_SDF2_6_1/Radix22ButterflyG2_din_im_dly_reg[13]/C
+    SLICE_X55Y46         FDCE (Prop_fdce_C_Q)         0.128     0.128 r  u_FFT/u_SDF2_6_1/Radix22ButterflyG2_din_im_dly_reg[13]/Q
+                         net (fo=2, routed)           0.063     0.191    u_FFT/u_SDF2_6_1/Radix22ButterflyG2_dinXTwdl_im_dly1[13]
+    SLICE_X55Y46         FDCE                                         r  u_FFT/u_SDF2_6_1/Radix22ButterflyG2_dinXTwdl_im_dly2_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

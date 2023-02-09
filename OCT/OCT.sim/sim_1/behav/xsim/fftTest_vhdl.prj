@@ -1,0 +1,51 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Complex4Multiply.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Complex4Multiply_block.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Complex4Multiply_block1.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Complex4Multiply_block2.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/fftTest_pkg.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_1.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SimpleDualPortRAM_generic.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator1.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_1.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_2.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator2.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_2.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_3_1.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_3.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator3.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_3.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_4.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator4.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_4.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_5_1.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_5.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator5.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_5.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_6.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator6.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_6.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_7_1.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_7.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator7.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_7.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_8.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator8.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_8.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/TWDLROM_9_1.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_9.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator9.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF1_9.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_CTRL1_10.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/SDFCommutator10.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/RADIX22FFT_SDF2_10.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FFT.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/FIR_Interpolation.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Sine_Wave.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/Sine_Wave1.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/fftTest_tc.vhd" \
+"C:/Users/adijo/Documents/Capstone/RP02-FPGA-Accelerated-OCT-Signal-Processing/matlab/hdlsrc/fftTest/fftTest.vhd" \
+
+# Do not sort compile order
+nosort
